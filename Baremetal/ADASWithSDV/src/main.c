@@ -29,7 +29,6 @@ SOFTWARE.
 
 /* Includes */
 #include "stm32f4xx.h"
-
 /* Private macro */
 /* Private variables */
 /* Private function prototypes */
@@ -42,10 +41,17 @@ SOFTWARE.
 **
 **===========================================================================
 */
+
 int main(void)
 {
 
+
   while (1)
   {
+
+
   }
 }
+
+
+
