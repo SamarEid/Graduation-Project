@@ -20,7 +20,6 @@
 #define GET_PSC()					(uint16_t)(((TIMER_FREQUENCY)/(TICK_FREQUENCY))-1)
 #define GET_ARR()   				(uint32_t)(((PWM_HIGH_TIME)*(TICK_FREQUENCY))-1)
 #define GET_RESET_VALUE()			(uint32_t)(((PWM_FULL_TIME)*(TICK_FREQUENCY))-1)
-#define GET_FULL_RESET_VALUE()		(uint16_t)(0xFFFF)
 #define GET_OC_INDEX(channel)		(channel/4)
 typedef struct{
 	GPIO_TypeDef* GPIOxTrigger;

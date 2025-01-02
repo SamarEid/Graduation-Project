@@ -43,9 +43,8 @@ void ultraSonicVidInit(ultraSonicInitTypeDef* ultraSonicSensor) {
     gpioPinInitStructure.GPIO_Pin = ultraSonicSensor->GPIOxEchoPin;
     GPIO_Init(ultraSonicSensor->GPIOxEcho, &gpioPinInitStructure);
     // Configure Alternate Function for Echo Pin
-    GPIO_PinAFConfig(ultraSonicSensor->GPIOxEcho, PinSource(ultraSonicSensor->GPIOxEchoPin), ultraSonicSensor->GPIOxEchoPinAF);    timerBaseInitStructure.TIM_Period = GET_FULL_RESET_VALUE();
-    // Timer Base Configuration for Echo signal
-    timerBaseInitStructure.TIM_Period = GET_FULL_RESET_VALUE();
+    GPIO_PinAFConfig(ultraSonicSensor->GPIOxEcho, PinSource(ultraSonicSensor->GPIOxEchoPin), ultraSonicSensor->GPIOxEchoPinAF);
+    // init basic timer for Input capture unit
     TIM_TimeBaseInit(ultraSonicSensor->TIMxEcho, &timerBaseInitStructure);
     //Configure TIM Channel for Input Capture
     TIM_ICInitStruct.TIM_Channel = ECHO_CHANNEL;
@@ -70,7 +69,7 @@ float ultraSonicFloatGetDistance(uint32_t*firstICVal,uint32_t*secondICVal){
 	if(*secondICVal>=*firstICVal){
 		difference = (*secondICVal) - (*firstICVal);
 	}else{
-		difference = (GET_FULL_RESET_VALUE()-(*firstICVal))+(*secondICVal)+1;
+		difference = (GET_RESET_VALUE()-(*firstICVal))+(*secondICVal)+1;
 	}
 	distance = ((SOUND_SPEED)*(difference*(1/TICK_FREQUENCY)))/2; // in meters
 	return distance;
