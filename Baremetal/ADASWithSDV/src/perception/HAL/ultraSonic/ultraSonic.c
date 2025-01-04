@@ -54,7 +54,7 @@ void ultraSonicVidInit(ultraSonicInitTypeDef* ultraSonicSensor) {
     TIM_ICInitStruct.TIM_ICFilter = DIGITAL_FILTER;
     TIM_ICInit(ultraSonicSensor->TIMxEcho, &TIM_ICInitStruct);
     //enable interrupt for echo timer
-    TIM_ITConfig(ultraSonicSensor->TIMxEcho, IT_CC_CHANNEL, ENABLE);
+    TIM_ITConfig(ultraSonicSensor->TIMxEcho, IT_CC_CHANNEL , ENABLE);
 	NVIC_EnableIRQ(ultraSonicSensor->EchoIRQ);
 }
 void ultraSonicVidStart(ultraSonicInitTypeDef* ultraSonicSensor) {
@@ -66,31 +66,37 @@ void ultraSonicVidStart(ultraSonicInitTypeDef* ultraSonicSensor) {
 float ultraSonicFloatGetDistance(uint32_t*firstICVal,uint32_t*secondICVal){
 	uint32_t difference = 0;
 	float distance = 0.00;
-	if(*secondICVal>=*firstICVal){
-		difference = (*secondICVal) - (*firstICVal);
-	}else{
-		difference = (GET_RESET_VALUE()-(*firstICVal))+(*secondICVal)+1;
-	}
+	difference = (*secondICVal) - (*firstICVal);
 	distance = ((SOUND_SPEED)*(difference*(1/TICK_FREQUENCY)))/2; // in meters
 	return distance;
 }
 
 void ultraSonicInputCaptureHandler(TIM_TypeDef*TIMx,uint32_t*firstICVal,uint32_t*secondICVal,float*distance,uint8_t* flag){
-	if(TIM_GetITStatus(TIMx,IT_CC_CHANNEL)!=RESET){
+	if(TIM_GetITStatus(TIMx,IT_CC_CHANNEL)!= RESET){
 		TIM_ClearITPendingBit(TIMx , IT_CC_CHANNEL);
 		uint32_t capturedValue = TIM_GetCapture1(TIMx);
+		if (TIM_GetFlagStatus(TIMx, TIM_FLAG_Update) != RESET) {
+		   TIM_ClearFlag(TIMx, TIM_FLAG_Update);
+		   *flag = FIRST_CAPTURE;
+		}
 		switch(*flag){
-		case FIRST_CAPTURE :
-			*firstICVal = capturedValue;
-			*flag = SECOND_CAPTURE;
-			break;
-		case SECOND_CAPTURE :
-			*secondICVal = capturedValue;
-			*flag = FIRST_CAPTURE;
-			*distance = ultraSonicFloatGetDistance(firstICVal,secondICVal);
-			break;
-		default :
-			break;
+			case FIRST_CAPTURE :
+				*firstICVal = capturedValue;
+				*flag = SECOND_CAPTURE;
+				break;
+			case SECOND_CAPTURE :
+				*secondICVal = capturedValue;
+				*flag = FIRST_CAPTURE;
+				*distance = ultraSonicFloatGetDistance(firstICVal,secondICVal);
+				GPIO_ToggleBits(GPIOA, GPIO_Pin_5);
+				//reset captures
+				*firstICVal = 0;
+				*secondICVal = 0;
+				break;
+			default :
+				break;
 		}
 	}
+
+
 }
