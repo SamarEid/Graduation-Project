@@ -75,10 +75,6 @@ void ultraSonicInputCaptureHandler(TIM_TypeDef*TIMx,uint32_t*firstICVal,uint32_t
 	if(TIM_GetITStatus(TIMx,IT_CC_CHANNEL)!= RESET){
 		TIM_ClearITPendingBit(TIMx , IT_CC_CHANNEL);
 		uint32_t capturedValue = TIM_GetCapture1(TIMx);
-		if (TIM_GetFlagStatus(TIMx, TIM_FLAG_Update) != RESET) {
-		   TIM_ClearFlag(TIMx, TIM_FLAG_Update);
-		   *flag = FIRST_CAPTURE;
-		}
 		switch(*flag){
 			case FIRST_CAPTURE :
 				*firstICVal = capturedValue;
@@ -88,7 +84,6 @@ void ultraSonicInputCaptureHandler(TIM_TypeDef*TIMx,uint32_t*firstICVal,uint32_t
 				*secondICVal = capturedValue;
 				*flag = FIRST_CAPTURE;
 				*distance = ultraSonicFloatGetDistance(firstICVal,secondICVal);
-				GPIO_ToggleBits(GPIOA, GPIO_Pin_5);
 				//reset captures
 				*firstICVal = 0;
 				*secondICVal = 0;
@@ -97,6 +92,7 @@ void ultraSonicInputCaptureHandler(TIM_TypeDef*TIMx,uint32_t*firstICVal,uint32_t
 				break;
 		}
 	}
+	//To handle overFLow value check on TIM Update flag in main loop or task
 
 
 }
