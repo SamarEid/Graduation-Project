@@ -1,0 +1,6 @@
+1738101541450	Move 'communication' to 'src'
+1738102214677	Move 'communication' to 'perception'
+1738102380737	Move 'formatter' to 'communication'
+1738102710379	Rename resource 'utils'
+1738103986334	Rename resource 'utils.c'
+1738104008352	Rename resource 'utils.h'

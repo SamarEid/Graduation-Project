@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Source" key="selection"/>
+		<item value="//&#x09;uint16_t x = SPI_I2S_ReceiveData(SPI2);" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="source"/>
-			<item value="triggerTimerBaseInitStructure"/>
-			<item value="PinSo"/>
-			<item value="GPIO_Pin"/>
-			<item value="GPIO_Pi"/>
-			<item value="GPIO"/>
-			<item value="TIM_Channel"/>
+			<item value="//&#x09;uint16_t x = SPI_I2S_ReceiveData(SPI2);"/>
+			<item value="&#x09;if(x==50){"/>
+			<item value="-&gt;"/>
+			<item value="GPIOSpeed_TypeDef"/>
+			<item value="GPIOPuPd_TypeDef"/>
+			<item value="GPIO_pins_define"/>
+			<item value="GPIOOType_TypeDef"/>
 			<item value="GPIOMode_TypeDef"/>
 		</list>
 		<list key="replacehistory">
+			<item value="."/>
 			<item value="GET_FULL_RESET_VALUE()"/>
 			<item value="timerBaseInitStructure"/>
 		</list>
