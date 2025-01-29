@@ -28,7 +28,8 @@ void communicationVidInit(){
 	    GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	    GPIO_Init(SPI_PORT, &GPIO_InitStruct);
 
-		communicationVidDeselectSlave();
+	    // Set PB12 high (deselect slave by default)
+	    GPIO_SetBits(SPI_PORT, SS_PIN);
 
 	    // Alternate function mapping for SPI2
 	    GPIO_PinAFConfig(SPI_PORT, PinSource(SCLK_PIN), SPI_ALTERNATE_FUNCTION);
@@ -52,9 +53,11 @@ void communicationVidInit(){
 }
 void communicationVidSendSensorData(sensorTypeDef*sensorData){
 	uint16_t* serialData = serializeSensorData(sensorData);
+	communicationVidSelectSlave();
 	for(int i = 0 ; i < sizeof(sensorTypeDef)/sizeof(uint16_t) ; i++){
 		SPI_I2S_SendData(SPI2 , *(serialData + i));
 	}
+	communicationVidDeselectSlave();
 }
 void communicationVidSelectSlave(){
 	GPIO_ResetBits(SPI_PORT, SS_PIN);

@@ -52,9 +52,11 @@ void communicationVidInit(){
 }
 void communicationVidSendSensorData(sensorTypeDef*sensorData){
 	uint16_t* serialData = serializeSensorData(sensorData);
+	communicationVidSelectSlave();
 	for(int i = 0 ; i < sizeof(sensorTypeDef)/sizeof(uint16_t) ; i++){
 		SPI_I2S_SendData(SPI2 , *(serialData + i));
 	}
+	communicationVidDeselectSlave();
 }
 void communicationVidSelectSlave(){
 	GPIO_ResetBits(SPI_PORT, SS_PIN);

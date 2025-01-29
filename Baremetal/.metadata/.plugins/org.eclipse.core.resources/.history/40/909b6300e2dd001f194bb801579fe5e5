@@ -28,7 +28,7 @@ void communicationVidInit(){
 	    GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	    GPIO_Init(SPI_PORT, &GPIO_InitStruct);
 
-		communicationVidDeselectSlave();
+		communicationVidSelectSlave();
 
 	    // Alternate function mapping for SPI2
 	    GPIO_PinAFConfig(SPI_PORT, PinSource(SCLK_PIN), SPI_ALTERNATE_FUNCTION);
