@@ -1,0 +1,10 @@
+/*
+ * communication.h
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#ifndef __PERCEPTION__UTILS__
+#define __PERCEPTION__UTILS__
+void perceptionRCCInit(void);
+#endif

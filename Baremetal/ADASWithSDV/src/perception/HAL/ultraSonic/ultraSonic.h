@@ -1,5 +1,11 @@
-#ifndef __HAL_ULTRASONIC__
-#define __HAL_ULTRASONIC__
+/*
+ * ultraSonic.h
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#ifndef PERCEPTION_HAL_ULTRASONIC_H_
+#define PERCEPTION_HAL_ULTRASONIC_H_
 
 #define SOUND_SPEED  				(uint8_t)340
 #define TIMER_FREQUENCY 			84000000 			//84 MHz
@@ -39,4 +45,4 @@ void ultraSonicInputCaptureHandler(TIM_TypeDef*,uint32_t*,uint32_t*,float*,uint8
 float ultraSonicFloatGetDistance(uint32_t*,uint32_t*);
 
 
-#endif
+#endif /* PERCEPTION_HAL_ULTRASONIC_H_ */

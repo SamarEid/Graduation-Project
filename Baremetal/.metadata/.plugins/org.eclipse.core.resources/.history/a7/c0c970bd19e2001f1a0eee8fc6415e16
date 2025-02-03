@@ -1,0 +1,13 @@
+/*
+ * communication.h
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+
+#ifndef PERCEPTION_COMMUNICATION_COMMUNICATION_H_
+#define PERCEPTION_COMMUNICATION_COMMUNICATION_H_
+
+void communicationVidSendSensorData(sensorTypeDef*);
+
+#endif /* PERCEPTION_COMMUNICATION_COMMUNICATION_H_ */

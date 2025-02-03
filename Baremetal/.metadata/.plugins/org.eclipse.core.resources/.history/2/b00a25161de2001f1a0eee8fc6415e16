@@ -28,6 +28,7 @@ SOFTWARE.
 */
 
 /* Includes */
+
 #include "stm32f4xx.h"
 /* Private macro */
 /* Private variables */
@@ -41,41 +42,20 @@ SOFTWARE.
 **
 **===========================================================================
 */
-
+#include "perception/typesDefinition/types.h"
+#include "perception/perceptionUtils/utils.h"
+#include "communication/communication.h"
+#include "perception/communication/transmission/transmission.h"
 int main(void)
 {
-	RCC_AHB1PeriphClockCmd(RCC_AHB1ENR_GPIOBEN, ENABLE);
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2,ENABLE);
-	GPIO_InitTypeDef* GPIO_InitStruct;
-	GPIO_InitStruct->GPIO_Mode = GPIO_Mode_AF ;
-	GPIO_InitStruct->GPIO_OType = GPIO_OType_PP ;
-	GPIO_InitStruct->GPIO_Pin = GPIO_Pin_12;
-	GPIO_InitStruct->GPIO_PuPd= GPIO_PuPd_NOPULL ;
-	GPIO_InitStruct->GPIO_Speed = GPIO_Speed_100MHz;
-	GPIO_Init(GPIOB, GPIO_InitStruct);
-	GPIO_PinAFConfig(GPIOB,GPIO_PinSource12,GPIO_AF_SPI2);
-	GPIO_InitStruct->GPIO_Pin = GPIO_Pin_13;
-	GPIO_Init(GPIOB, GPIO_InitStruct);
-	GPIO_PinAFConfig(GPIOB,GPIO_PinSource13,GPIO_AF_SPI2);
-	GPIO_InitStruct->GPIO_Pin = GPIO_Pin_14;
-	GPIO_Init(GPIOB, GPIO_InitStruct);
-	GPIO_PinAFConfig(GPIOB,GPIO_PinSource14,GPIO_AF_SPI2);
-	GPIO_InitStruct->GPIO_Pin = GPIO_Pin_15;
-	GPIO_Init(GPIOB, GPIO_InitStruct);
-	GPIO_PinAFConfig(GPIOB,GPIO_PinSource15,GPIO_AF_SPI2);
+	perceptionRCCInit();
+	communicationVidInit();
+	sensorTypeDef ultraSonic = {16,55.1235};
+	sensorTypeDef ultraSonic2 = {17, 101.22};
+	communicationVidSendSensorData(&ultraSonic);
+	communicationVidSendSensorData(&ultraSonic2);
 
 
-	SPI_InitTypeDef* SPI_InitStruct;
-	SPI_InitStruct->SPI_Mode = SPI_Mode_Master;
-	SPI_InitStruct->SPI_Direction = SPI_Direction_2Lines_FullDuplex;
-	SPI_InitStruct->SPI_CPHA =SPI_CPHA_1Edge;
-	SPI_InitStruct->SPI_CPOL =SPI_CPOL_Low;
-	SPI_InitStruct->SPI_BaudRatePrescaler =SPI_BaudRatePrescaler_2;
-	SPI_InitStruct->SPI_DataSize = SPI_DataSize_16b;
-	SPI_InitStruct->SPI_FirstBit = SPI_FirstBit_LSB;
-	SPI_Init(SPI2, SPI_InitStruct);
-	SPI_Cmd(SPI2, ENABLE);
-	SPI_I2S_SendData(SPI2, 1089);
   while (1)
   {
 
