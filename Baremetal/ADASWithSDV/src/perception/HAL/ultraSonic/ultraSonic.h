@@ -43,6 +43,6 @@ void ultraSonicVidInit(ultraSonicInitTypeDef*);
 void ultraSonicVidStart(ultraSonicInitTypeDef*);
 void ultraSonicInputCaptureHandler(TIM_TypeDef*,uint32_t*,uint32_t*,float*,uint8_t*);
 float ultraSonicFloatGetDistance(uint32_t*,uint32_t*);
-
+void ultraSonicCheckOverFlow(TIM_TypeDef* , uint8_t*);
 
 #endif /* PERCEPTION_HAL_ULTRASONIC_H_ */

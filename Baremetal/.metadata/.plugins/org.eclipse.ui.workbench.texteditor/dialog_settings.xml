@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="//&#x09;uint16_t x = SPI_I2S_ReceiveData(SPI2);" key="selection"/>
+		<item value="vTaskSwitchContext" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="//&#x09;uint16_t x = SPI_I2S_ReceiveData(SPI2);"/>
-			<item value="&#x09;if(x==50){"/>
-			<item value="-&gt;"/>
-			<item value="GPIOSpeed_TypeDef"/>
-			<item value="GPIOPuPd_TypeDef"/>
-			<item value="GPIO_pins_define"/>
-			<item value="GPIOOType_TypeDef"/>
-			<item value="GPIOMode_TypeDef"/>
+			<item value="vTaskSwitchContext"/>
+			<item value="pxCurrentTCB"/>
+			<item value="pxCurrentTCBConst"/>
+			<item value="context"/>
+			<item value="pxCurrentTCBConst2"/>
+			<item value="PriorityGroup"/>
+			<item value="VTOR"/>
+			<item value="vPortSVCHandler"/>
 		</list>
 		<list key="replacehistory">
 			<item value="."/>
@@ -27,7 +27,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="826" key="DIALOG_X_ORIGIN"/>
-		<item value="268" key="DIALOG_Y_ORIGIN"/>
+		<item value="1211" key="DIALOG_X_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

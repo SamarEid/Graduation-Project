@@ -30,6 +30,10 @@ SOFTWARE.
 /* Includes */
 
 #include "stm32f4xx.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "communication/communication.h"
+#include "perception/APP/app.h"
 /* Private macro */
 /* Private variables */
 /* Private function prototypes */
@@ -42,14 +46,25 @@ SOFTWARE.
 **
 **===========================================================================
 */
+
+
+void SysTick_Init(void) {
+    SystemCoreClockUpdate(); // Update system clock
+    SysTick_Config(SystemCoreClock / configTICK_RATE_HZ); // Set SysTick to 1ms interval
+}
+
 int main(void)
 {
-
-  while (1)
-  {
-
-
-  }
+	SysTick_Init();
+	__enable_irq();
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+	perceptionVidInit();
+	perceptionVidBegin();
+	vTaskStartScheduler();
+    while (1)
+    {
+        /* Should never reach here */
+    }
 }
 
 

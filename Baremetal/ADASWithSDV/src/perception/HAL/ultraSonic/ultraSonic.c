@@ -4,9 +4,9 @@
  *  Created on: ??þ/??þ/????
  *      Author: ASHRY
  */
-#include "../../../Libraries/Device/STM32F4xx/Include/stm32f4xx.h"
-#include "../../../Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h"
-#include "../../../Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h"
+#include "stm32f4xx.h"
+#include "stm32f4xx_gpio.h"
+#include "stm32f4xx_tim.h"
 #include "../../../utils/utils.h"
 #include "ultraSonic.h"
 
@@ -93,6 +93,10 @@ void ultraSonicInputCaptureHandler(TIM_TypeDef*TIMx,uint32_t*firstICVal,uint32_t
 		}
 	}
 	//To handle overFLow value check on TIM Update flag in main loop or task
-
-
+}
+void ultraSonicCheckOverFlow(TIM_TypeDef* TIMx, uint8_t*flag){
+	if (TIM_GetFlagStatus(TIMx, TIM_FLAG_Update) != RESET) {
+		TIM_ClearFlag(TIMx, TIM_FLAG_Update);
+		flag = FIRST_CAPTURE;
+	}
 }

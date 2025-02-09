@@ -4,12 +4,13 @@
  *  Created on: ??þ/??þ/????
  *      Author: ASHRY
  */
-#include "../../Libraries/Device/STM32F4xx/Include/stm32f4xx.h"
-#include "../../Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h"
-#include "../../Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h"
+#include "stm32f4xx.h"
+#include "stm32f4xx_gpio.h"
+#include "stm32f4xx_spi.h"
 #include "../utils/utils.h"
 #include "./communication.h"
 void communicationVidInit(){
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
 	GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.GPIO_Pin = SCLK_PIN | MISO_PIN | MOSI_PIN;
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;

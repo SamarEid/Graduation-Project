@@ -4,8 +4,8 @@
  *  Created on: ??þ/??þ/????
  *      Author: ASHRY
  */
-#include "../Libraries/Device/STM32F4xx/Include/stm32f4xx.h"
-#include "../Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h"
+#include "stm32f4xx.h"
+#include "stm32f4xx_spi.h"
 #include "../../typesDefinition/types.h"
 #include "../formatter/serialization.h"
 #include "./transmission.h"
