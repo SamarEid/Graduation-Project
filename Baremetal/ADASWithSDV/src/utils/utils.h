@@ -8,7 +8,8 @@
 #ifndef UTILS_UTILS_H_
 #define UTILS_UTILS_H_
 
-uint8_t PinSource(uint32_t);
+#define GET_OC_INDEX(channel)		(channel/4)
+uint16_t PinSource(uint32_t);
 
 
 

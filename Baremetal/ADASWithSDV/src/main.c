@@ -47,7 +47,6 @@ SOFTWARE.
 **===========================================================================
 */
 
-
 void SysTick_Init(void) {
     SystemCoreClockUpdate(); // Update system clock
     SysTick_Config(SystemCoreClock / configTICK_RATE_HZ); // Set SysTick to 1ms interval
@@ -61,6 +60,7 @@ int main(void)
 	perceptionVidInit();
 	perceptionVidBegin();
 	vTaskStartScheduler();
+
     while (1)
     {
         /* Should never reach here */
