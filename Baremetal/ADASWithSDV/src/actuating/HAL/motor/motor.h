@@ -8,21 +8,16 @@
 #ifndef ACTUATING_HAL_MOTOR_MOTOR_H_
 #define ACTUATING_HAL_MOTOR_MOTOR_H_
 
-#define TIMER_FREQ                     84000000   // 84 MHz Timer Frequency
-#define TICK_FREQ                      1000000    // 1 MHz Base Tick Frequency
+#define TIMER_FREQ                     84000000   //84MHz
+#define TICK_FREQ                      1000000    //1MHz
+
 #define MAXIMUM_MOTOR_RPM_SPEED        97
 #define HANDLE_FAULT_MOTOR_RPM_SPEED   10
-#define MAXIMUM_COUNT_NUMBER           0xFFFF     // 16-bit timer max value
-#define PWM_FREQ                       1000       // 1 kHz PWM frequency
+#define PWM_FREQ 					   1000       //1KHz
 
-// Compute Reset Value
-#define RESET_VALUE                    ((TICK_FREQ / PWM_FREQ) - 1)
-
-// Compute ARR dynamically based on speed
-#define SET_ARR(SPEED)                  ((uint32_t)( ((float)(SPEED) / MAXIMUM_MOTOR_RPM_SPEED) * RESET_VALUE))
-
-// Compute PSC to set the base tick frequency (TICK_FREQ)
-#define SET_PSC()                        ((uint16_t)((TIMER_FREQ / TICK_FREQ) - 1))
+#define RESET_VALUE                    ( ((TICK_FREQ)/(PWM_FREQ))-1 )
+#define SET_ARR(SPEED)                 (uint32_t) ((((float)(SPEED)/(MAXIMUM_MOTOR_RPM_SPEED))*RESET_VALUE)-1)
+#define SET_PSC()                      (uint16_t)((TIMER_FREQ / TICK_FREQ) - 1)
 
 typedef struct {
 	GPIO_TypeDef* in1GPIOx;

@@ -60,7 +60,7 @@ void motorVidStart(motorInitTypeDef*motor, uint8_t motorSpeed,direction motorDir
 	TIM_Cmd(motor->TIMxEnable, ENABLE);
 }
 void motorVidSetSpeed(motorInitTypeDef*motor, uint8_t motorSpeed){
-	if(motorSpeed <= 97){
+	if(motorSpeed <= MAXIMUM_MOTOR_RPM_SPEED){
 		TIM_SetAutoreload(motor->TIMxEnable, SET_ARR(motorSpeed) );
 	}else{
 		TIM_SetAutoreload(motor->TIMxEnable, SET_ARR(HANDLE_FAULT_MOTOR_RPM_SPEED) );
