@@ -137,7 +137,7 @@ void perceptionVidBegin(void){
 			"checkOVFTask",
 			256,
 			NULL,
-			0,
+			1,
 			&checkOverFlow
 	);
 	xTaskCreate(
@@ -145,7 +145,7 @@ void perceptionVidBegin(void){
 			"sendDataTask",
 			256,
 			NULL,
-			1,
+			2,
 			&sendData
 	);
 }

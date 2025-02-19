@@ -21,11 +21,12 @@ void communicationVidInit(){
 
     GPIO_InitStruct.GPIO_Pin = SS_PIN;
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
-    GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
-    GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
     GPIO_Init(SPI_PORT, &GPIO_InitStruct);
-
+    //initialize trigger pin and reset it
+    GPIO_InitStruct.GPIO_Pin = TRIGGER_PIN;
+    GPIO_InitStruct.GPIO_Mode = GPIO_Mode_IN;
+    GPIO_Init(SPI_PORT, &GPIO_InitStruct);
+    GPIO_ResetBits(SPI_PORT, TRIGGER_PIN);
 	communicationVidDeselectSlave();
 
 	// Alternate function mapping for SPI2
@@ -54,4 +55,7 @@ void communicationVidSelectSlave(){
 void communicationVidDeselectSlave(){
 	while (SPI_I2S_GetFlagStatus(COMMUNICATION_SPI, SPI_I2S_FLAG_BSY) == SET);
 	GPIO_SetBits(SPI_PORT, SS_PIN);
+}
+uint8_t communicationCharGetTriggerPinValue(){
+	return GPIO_ReadInputDataBit(SPI_PORT, TRIGGER_PIN);
 }

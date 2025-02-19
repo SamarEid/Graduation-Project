@@ -34,6 +34,7 @@ SOFTWARE.
 #include "task.h"
 #include "communication/communication.h"
 #include "perception/APP/app.h"
+#include "actuating/APP/app.h"
 /* Private macro */
 /* Private variables */
 /* Private function prototypes */
@@ -59,11 +60,12 @@ int main(void)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 	perceptionVidInit();
 	perceptionVidBegin();
+	actuatingVidInit();
+	actuatingVidBegin();
 	vTaskStartScheduler();
 
     while (1)
     {
-        /* Should never reach here */
     }
 }
 
