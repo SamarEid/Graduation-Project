@@ -1,1 +1,20 @@
-Info: Nothing to build for ADASWithSDV
+18:41:30 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c ..\src\main.c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -DSTM32F4XX -DSTM32F40XX -DUSE_STDPERIPH_DRIVER -I../src -ID:\Graduation-Project\Baremetal\ADASWithSDV\src\FreeRTOS\Source\include -ID:\Graduation-Project\Baremetal\ADASWithSDV\src\FreeRTOS\Source\portable\GCC\ARM_CM4F -I../Libraries/CMSIS/Include -I../Libraries/Device/STM32F4xx/Include -I../Libraries/STM32F4xx_StdPeriph_Driver/inc -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o src\main.o 
+arm-atollic-eabi-gcc -o ADASWithSDV.elf Libraries\STM32F4xx_StdPeriph_Driver\src\misc.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_adc.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_can.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_crc.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_aes.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_des.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_cryp_tdes.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dbgmcu.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dcmi.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_md5.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_hash_sha1.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_iwdg.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_pwr.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rng.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rtc.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.o Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_wwdg.o src\FreeRTOS\Source\croutine.o src\FreeRTOS\Source\event_groups.o src\FreeRTOS\Source\list.o src\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.o src\FreeRTOS\Source\portable\MemMang\heap_4.o src\FreeRTOS\Source\queue.o src\FreeRTOS\Source\stream_buffer.o src\FreeRTOS\Source\tasks.o src\FreeRTOS\Source\timers.o src\actuating\APP\app.o src\actuating\HAL\motor\motor.o src\actuating\communication\reception\reception.o src\communication\communication.o src\main.o src\perception\APP\app.o src\perception\HAL\ultraSonic\ultraSonic.o src\perception\communication\formatter\serialization.o src\perception\communication\transmission\transmission.o src\startup_stm32f40xx.o src\stm32f4xx_it.o src\system_stm32f4xx.o src\utils\utils.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../stm32f4_flash.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=ADASWithSDV.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+D:\Program Files\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar D:\Program Files\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar convert-hex sizeinfo list ADASWithSDV.elf 
+Generate build reports...
+Converting build output to hex
+Output sent to: ADASWithSDV.hex
+Converting build output to hex done
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  17252	    252	  41948	  59452	   e83c	ADASWithSDV.elf
+Print size information done
+Generate listing file
+Output sent to: ADASWithSDV.list
+Generate listing file done
+Generate build reports done
+
+18:41:37 Build Finished (took 7s.259ms)
+

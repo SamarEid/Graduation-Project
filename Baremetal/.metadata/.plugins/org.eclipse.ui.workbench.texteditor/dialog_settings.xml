@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="RPM_TO_FREQ" key="selection"/>
+		<item value="SPI_BaudRate_Prescaler" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="SPI_BaudRate_Prescaler"/>
 			<item value="RPM_TO_TIME"/>
 			<item value="vTaskSwitchContext"/>
 			<item value="pxCurrentTCB"/>
@@ -15,7 +16,6 @@
 			<item value="context"/>
 			<item value="pxCurrentTCBConst2"/>
 			<item value="PriorityGroup"/>
-			<item value="VTOR"/>
 		</list>
 		<list key="replacehistory">
 			<item value="RPM_TO_FREQ"/>
