@@ -1,1 +1,0 @@
-# Cusotm Linux image
