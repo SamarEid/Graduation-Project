@@ -1,0 +1,3 @@
+/media/dell/b0b0d1e7-a637-4e2a-b23f-606d50d6ed7b/Linux/BSD/build/CMakeFiles/BlindSpotDetection.dir
+/media/dell/b0b0d1e7-a637-4e2a-b23f-606d50d6ed7b/Linux/BSD/build/CMakeFiles/edit_cache.dir
+/media/dell/b0b0d1e7-a637-4e2a-b23f-606d50d6ed7b/Linux/BSD/build/CMakeFiles/rebuild_cache.dir
