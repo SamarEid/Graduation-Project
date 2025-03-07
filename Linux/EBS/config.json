@@ -1,0 +1,12 @@
+{
+    "mqtt": {
+        "broker": "tcp://test.mosquitto.org:1883",
+        "client_id": "EBS_Client",
+        "front_sensor_topic": "front_ultrasonic",
+        "front_alert_topic": "emergency_braking_status"
+    },
+    "thresholds": {
+        "warning_threshold": 8.0,
+        "critical_threshold": 4.0
+    }
+}
