@@ -89,7 +89,7 @@ void actuatingVidBegin(){
 			"receiveCommand",
 			256,
 			NULL,
-			3,
+			0,
 			&receiveCommandTask
 	);
 }

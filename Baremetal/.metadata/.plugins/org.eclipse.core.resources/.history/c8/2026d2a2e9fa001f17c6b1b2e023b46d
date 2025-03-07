@@ -32,9 +32,9 @@ SOFTWARE.
 #include "stm32f4xx.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "communication/communication.h"
-#include "perception/APP/app.h"
-#include "actuating/APP/app.h"
+//#include "communication/communication.h"
+//#include "perception/APP/app.h"
+//#include "actuating/APP/app.h"
 /* Private macro */
 /* Private variables */
 /* Private function prototypes */
@@ -47,19 +47,50 @@ SOFTWARE.
 **
 **===========================================================================
 */
-
+void Gpio_Config(){
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA,ENABLE);
+	GPIO_InitTypeDef initStruct ={};
+	initStruct.GPIO_Mode= GPIO_Mode_OUT;
+	initStruct.GPIO_OType= GPIO_OType_PP;
+	initStruct.GPIO_Pin= GPIO_Pin_4 | GPIO_Pin_5 ;
+	initStruct.GPIO_PuPd= GPIO_PuPd_NOPULL;
+	initStruct.GPIO_Speed= GPIO_Speed_100MHz;
+	GPIO_Init(GPIOA,&initStruct);
+	GPIO_SetBits(GPIOA,GPIO_Pin_4 | GPIO_Pin_5);
+}
+void task1(void*pv){
+	while(1){
+		GPIO_ToggleBits(GPIOA,GPIO_Pin_4);
+		for(int i = 0 ; i<84000; i++){
+			__asm("NOP");
+		}
+	}
+}
+void task2(void*pv){
+	while(1){
+		vTaskDelay(40);
+		GPIO_ToggleBits(GPIOA,GPIO_Pin_5);
+		for(int i = 0 ; i<84000; i++){
+			__asm("NOP");
+		}
+	}
+}
 int main(void)
 {
-
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
-	perceptionVidInit();
-	perceptionVidBegin();
-	actuatingVidInit();
-	actuatingVidBegin();
+	//NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+	Gpio_Config();
+	xTaskCreate(task1,"task1",128,NULL,1,NULL);
+	xTaskCreate(task2,"task2",128,NULL,2,NULL);
+//	perceptionVidInit();
+//	perceptionVidBegin();
+//	actuatingVidInit();
+//	actuatingVidBegin();
 	vTaskStartScheduler();
 
-    while (1);
+    while (1)
+    {
 
+    }
 }
 
 

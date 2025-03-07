@@ -48,9 +48,15 @@ SOFTWARE.
 **===========================================================================
 */
 
+void SysTick_Init(void) {
+    SystemCoreClockUpdate(); // Update system clock
+    SysTick_Config(SystemCoreClock / configTICK_RATE_HZ); // Set SysTick to 1ms interval
+}
+
 int main(void)
 {
-
+	SysTick_Init();
+	__enable_irq();
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 	perceptionVidInit();
 	perceptionVidBegin();
@@ -58,8 +64,9 @@ int main(void)
 	actuatingVidBegin();
 	vTaskStartScheduler();
 
-    while (1);
-
+    while (1)
+    {
+    }
 }
 
 
