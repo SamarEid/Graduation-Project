@@ -55,8 +55,8 @@ int main(void)
 	communicationVidInit();
 	perceptionVidInit();
 	perceptionVidBegin();
-	actuatingVidInit();
-	actuatingVidBegin();
+//	actuatingVidInit();
+//	actuatingVidBegin();
 	vTaskStartScheduler();
 
     while (1);

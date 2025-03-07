@@ -53,8 +53,8 @@ int main(void)
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 	communicationVidInit();
-	perceptionVidInit();
-	perceptionVidBegin();
+//	perceptionVidInit();
+//	perceptionVidBegin();
 	actuatingVidInit();
 	actuatingVidBegin();
 	vTaskStartScheduler();

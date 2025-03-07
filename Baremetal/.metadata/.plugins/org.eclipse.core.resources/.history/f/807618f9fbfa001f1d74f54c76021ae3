@@ -97,6 +97,6 @@ void ultraSonicInputCaptureHandler(TIM_TypeDef*TIMx,uint32_t*firstICVal,uint32_t
 void ultraSonicCheckOverFlow(TIM_TypeDef* TIMx, uint8_t*flag){
 	if (TIM_GetFlagStatus(TIMx, TIM_FLAG_Update) != RESET) {
 		TIM_ClearFlag(TIMx, TIM_FLAG_Update);
-		*flag = FIRST_CAPTURE;
+		flag = FIRST_CAPTURE;
 	}
 }

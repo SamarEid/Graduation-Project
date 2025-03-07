@@ -109,7 +109,7 @@ void perceptionVidCheckOverFlowTask(void*pvParameters){
 // send data after measuring (50ms)
 void perceptionVidSendSensorsDataTask(void*pvParameters){
 	while(1){
-		vTaskDelay(50);
+		//vTaskDelay(50);
 		transmissionVidSendSensorData(&FRONT_sensorData);
 		transmissionVidSendSensorData(&LHS_sensorData);
 		transmissionVidSendSensorData(&RHS_sensorData);
@@ -124,9 +124,9 @@ void perceptionVidInit(void){
 	ultraSonicVidInit(&RHS_ultraSonic);
 	ultraSonicVidInit(&FRONT_ultraSonic);
 	//start sensing
-	ultraSonicVidStart(&FRONT_ultraSonic);
 	ultraSonicVidStart(&LHS_ultraSonic);
 	ultraSonicVidStart(&RHS_ultraSonic);
+	ultraSonicVidStart(&FRONT_ultraSonic);
 }
 //create Tasks
 void perceptionVidBegin(void){

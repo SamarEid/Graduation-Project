@@ -133,7 +133,7 @@ void perceptionVidBegin(void){
 	xTaskCreate(
 			perceptionVidCheckOverFlowTask,
 			"checkOVFTask",
-			256,
+			512,
 			NULL,
 			1,
 			NULL
@@ -141,7 +141,7 @@ void perceptionVidBegin(void){
 	xTaskCreate(
 			perceptionVidSendSensorsDataTask,
 			"sendDataTask",
-			256,
+			512,
 			NULL,
 			2,
 			NULL

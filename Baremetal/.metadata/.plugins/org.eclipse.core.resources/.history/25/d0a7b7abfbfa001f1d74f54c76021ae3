@@ -47,10 +47,9 @@ void actuatingVidInit(void){
 }
 // receive command and execute it
 void actuatingVidExecuteCommandTask(void*pvParameters){
-	uint16_t command = 500;
 	while(1){
 
-		command = receptionHalfWordReceiveCommand();
+		uint16_t command = receptionHalfWordReceiveCommand();
 		switch(command){
 			case START:
 				motorVidStart(&LHS_Motor,INITIAL_SPEED,CW);
