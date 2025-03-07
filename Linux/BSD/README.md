@@ -10,5 +10,5 @@ The Blind Spot Detection (BSD) system monitors the vehicle's blind spots using s
 The system is divided into the following modules:
 1. **Configuration Module**: Reads the config.json file and manages the configuration parameters
 2. **Communication Module**: Handles MQTT communication [Connecting to broker, subscribing to topics, publishing to topics, disconnecting]
-3. **Blind Spot Detection Module**: Processes sensor data and trigers alerts
+3. **Blind Spot Detection Module**: Processes sensor data and triggers alerts
 4. **Left & Right blind spot threads**: two separate threads to handle the blind spots

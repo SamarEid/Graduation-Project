@@ -4,6 +4,13 @@ project(BlindSpotDetection)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Check if we are cross-compiling
+if(CMAKE_CROSSCOMPILING)
+    message(STATUS "Cross-compiling for Raspberry Pi")
+else()
+    message(STATUS "Building natively")
+endif()
+
 # Find required packages
 find_package(spdlog REQUIRED)
 find_package(PahoMqttCpp REQUIRED)

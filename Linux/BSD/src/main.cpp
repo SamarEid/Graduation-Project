@@ -5,8 +5,6 @@
 #include "../include/ConfigurationManager.h"
 #include <spdlog/spdlog.h>
 
-// const std::string broker = "tcp://test.mosquitto.org:1883";
-
 int main() {
     ConfigurationManager config("../config.json");
     Communication leftComm(config.broker, config.LeftClientId);
