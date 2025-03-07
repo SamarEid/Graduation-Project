@@ -11,7 +11,7 @@
 #include "../communication/reception/reception.h"
 #include "./app.h"
 // structs to initialize motors with its associated inputs and enables
-motorInitTypeDef LHS_Motor = {
+static motorInitTypeDef LHS_Motor = {
 	GPIOB,
 	GPIO_Pin_0,
 	GPIOB,
@@ -22,7 +22,7 @@ motorInitTypeDef LHS_Motor = {
 	TIM_Channel_1,
 	GPIO_AF_TIM1
 };
-motorInitTypeDef RHS_Motor = {
+static motorInitTypeDef RHS_Motor = {
 	GPIOB,
 	GPIO_Pin_2,
 	GPIOB,
@@ -83,12 +83,13 @@ void actuatingVidExecuteCommandTask(void*pvParameters){
 }
 // create actuating task
 void actuatingVidBegin(){
+	TaskHandle_t receiveCommandTask = NULL;
 	xTaskCreate(
 			actuatingVidExecuteCommandTask,
 			"receiveCommand",
 			256,
 			NULL,
 			3,
-			NULL
+			&receiveCommandTask
 	);
 }

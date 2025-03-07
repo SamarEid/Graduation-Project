@@ -13,7 +13,7 @@
 #include "./app.h"
 
 // ultraSonic structs to initialize sensors to its pins and timers
-ultraSonicInitTypeDef FRONT_ultraSonic   = {
+static ultraSonicInitTypeDef FRONT_ultraSonic   = {
 		GPIOA,
 		GPIOA,
 		TIM2,
@@ -26,7 +26,7 @@ ultraSonicInitTypeDef FRONT_ultraSonic   = {
 		TIM3_IRQn
 };
 
-ultraSonicInitTypeDef LHS_ultraSonic 	= {
+static ultraSonicInitTypeDef LHS_ultraSonic 	= {
 		GPIOB,
 		GPIOB,
 		TIM2,
@@ -39,7 +39,7 @@ ultraSonicInitTypeDef LHS_ultraSonic 	= {
 		TIM4_IRQn
 };
 
-ultraSonicInitTypeDef RHS_ultraSonic 	= {
+static ultraSonicInitTypeDef RHS_ultraSonic 	= {
 		GPIOB,
 		GPIOA,
 		TIM2,
@@ -53,15 +53,15 @@ ultraSonicInitTypeDef RHS_ultraSonic 	= {
 };
 
 // variables for ultraSonic capture unit handlers
-uint32_t LHS_firstCap = 0	, LHS_secondCap = 0,
-		 RHS_firstCap = 0	, RHS_secondCap = 0,
-		 FRONT_firstCap = 0	, FRONT_secondCap = 0;
-uint8_t  LHS_flag = 0, RHS_flag = 0, FRONT_flag = 0;
+static uint32_t LHS_firstCap = 0	, LHS_secondCap = 0,
+			    RHS_firstCap = 0	, RHS_secondCap = 0,
+				FRONT_firstCap = 0	, FRONT_secondCap = 0;
+static uint8_t  LHS_flag = 0, RHS_flag, FRONT_flag;
 
 //sensor data with its associated id
-sensorTypeDef FRONT_sensorData 	= {1,4.00};
-sensorTypeDef LHS_sensorData 	= {2,4.00};
-sensorTypeDef RHS_sensorData 	= {3,4.00};
+static sensorTypeDef FRONT_sensorData 	= {1,4.00};
+static sensorTypeDef LHS_sensorData 	= {2,4.00};
+static sensorTypeDef RHS_sensorData 	= {3,4.00};
 //input capture unit handlers
 void TIM3_IRQHandler(void){
 	ultraSonicInputCaptureHandler(
@@ -130,13 +130,15 @@ void perceptionVidInit(void){
 }
 //create Tasks
 void perceptionVidBegin(void){
+	TaskHandle_t sendData = NULL;
+	TaskHandle_t checkOverFlow = NULL;
 	xTaskCreate(
 			perceptionVidCheckOverFlowTask,
 			"checkOVFTask",
 			256,
 			NULL,
 			1,
-			NULL
+			&checkOverFlow
 	);
 	xTaskCreate(
 			perceptionVidSendSensorsDataTask,
@@ -144,7 +146,7 @@ void perceptionVidBegin(void){
 			256,
 			NULL,
 			2,
-			NULL
+			&sendData
 	);
 }
 

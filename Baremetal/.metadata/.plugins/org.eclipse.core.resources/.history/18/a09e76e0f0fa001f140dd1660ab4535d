@@ -56,7 +56,7 @@ ultraSonicInitTypeDef RHS_ultraSonic 	= {
 uint32_t LHS_firstCap = 0	, LHS_secondCap = 0,
 		 RHS_firstCap = 0	, RHS_secondCap = 0,
 		 FRONT_firstCap = 0	, FRONT_secondCap = 0;
-uint8_t  LHS_flag = 0, RHS_flag = 0, FRONT_flag = 0;
+uint8_t  LHS_flag = 0, RHS_flag, FRONT_flag;
 
 //sensor data with its associated id
 sensorTypeDef FRONT_sensorData 	= {1,4.00};
@@ -130,13 +130,15 @@ void perceptionVidInit(void){
 }
 //create Tasks
 void perceptionVidBegin(void){
+	TaskHandle_t sendData = NULL;
+	TaskHandle_t checkOverFlow = NULL;
 	xTaskCreate(
 			perceptionVidCheckOverFlowTask,
 			"checkOVFTask",
 			256,
 			NULL,
 			1,
-			NULL
+			&checkOverFlow
 	);
 	xTaskCreate(
 			perceptionVidSendSensorsDataTask,
@@ -144,7 +146,7 @@ void perceptionVidBegin(void){
 			256,
 			NULL,
 			2,
-			NULL
+			&sendData
 	);
 }
 

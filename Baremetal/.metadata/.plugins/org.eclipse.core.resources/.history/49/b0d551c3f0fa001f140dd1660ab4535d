@@ -35,8 +35,8 @@ motorInitTypeDef RHS_Motor = {
 };
 // initialize RCC clock for peripherals involved in actuating tasks
 void actuatingVidRCCInit(void){
-	RCC_AHB1PeriphClockCmd(RCC_AHB1ENR_GPIOAEN, ENABLE);
-	RCC_AHB1PeriphClockCmd(RCC_AHB1ENR_GPIOBEN, ENABLE);
+	//RCC_AHB1PeriphClockCmd(RCC_AHB1ENR_GPIOAEN, ENABLE);
+	//RCC_AHB1PeriphClockCmd(RCC_AHB1ENR_GPIOBEN, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2ENR_TIM1EN, ENABLE);
 }
 // initialize motors from structs that defined above
@@ -83,12 +83,13 @@ void actuatingVidExecuteCommandTask(void*pvParameters){
 }
 // create actuating task
 void actuatingVidBegin(){
+	TaskHandle_t receiveCommandTask = NULL;
 	xTaskCreate(
 			actuatingVidExecuteCommandTask,
 			"receiveCommand",
 			256,
 			NULL,
 			3,
-			NULL
+			&receiveCommandTask
 	);
 }

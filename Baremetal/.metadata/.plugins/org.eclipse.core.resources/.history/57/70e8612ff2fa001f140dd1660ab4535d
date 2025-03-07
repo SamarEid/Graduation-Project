@@ -83,12 +83,13 @@ void actuatingVidExecuteCommandTask(void*pvParameters){
 }
 // create actuating task
 void actuatingVidBegin(){
+	TaskHandle_t receiveCommandTask = NULL;
 	xTaskCreate(
 			actuatingVidExecuteCommandTask,
 			"receiveCommand",
 			256,
 			NULL,
 			3,
-			NULL
+			&receiveCommandTask
 	);
 }
