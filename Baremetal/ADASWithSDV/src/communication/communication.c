@@ -9,8 +9,13 @@
 #include "stm32f4xx_spi.h"
 #include "../utils/utils.h"
 #include "./communication.h"
-void communicationVidInit(){
+
+void communicatioRCCVidInit(void){
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+}
+void communicationVidInit(){
+	communicatioRCCVidInit();
 	GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.GPIO_Pin = SCLK_PIN | MISO_PIN | MOSI_PIN;
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;

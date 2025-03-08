@@ -56,6 +56,7 @@ void ultraSonicVidInit(ultraSonicInitTypeDef* ultraSonicSensor) {
     //enable interrupt for echo timer
     TIM_ITConfig(ultraSonicSensor->TIMxEcho, IT_CC_CHANNEL , ENABLE);
 	NVIC_EnableIRQ(ultraSonicSensor->EchoIRQ);
+	NVIC_SetPriority(ultraSonicSensor->EchoIRQ, ECHO_PRIORITY);
 }
 void ultraSonicVidStart(ultraSonicInitTypeDef* ultraSonicSensor) {
     //Enable Trigger Timer

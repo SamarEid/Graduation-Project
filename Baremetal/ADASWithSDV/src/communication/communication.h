@@ -19,7 +19,7 @@
 #define DATA_SIZE					SPI_DataSize_16b
 #define BAUD_RATE_PRESCALER			SPI_BaudRatePrescaler_2
 #define ENDIAN						SPI_FirstBit_LSB
-
+void communicatioRCCVidInit(void);
 void communicationVidInit();
 void communicationVidSelectSlave();
 void communicationVidDeselectSlave();

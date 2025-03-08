@@ -87,7 +87,7 @@ void actuatingVidBegin(){
 	xTaskCreate(
 			actuatingVidExecuteCommandTask,
 			"receiveCommand",
-			256,
+			512,
 			NULL,
 			3,
 			NULL
