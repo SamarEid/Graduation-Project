@@ -110,7 +110,7 @@ void perceptionVidCheckOverFlowTask(void*pvParameters){
 // send data after measuring (50ms)
 void perceptionVidSendSensorsDataTask(void*pvParameters){
 	while(1){
-		vTaskDelay(50);
+		//vTaskDelay(50);
 		communicationVidSelectSlave();
 		transmissionVidSendStart();
 		transmissionVidSendSensorData(&FRONT_sensorData);
@@ -118,6 +118,7 @@ void perceptionVidSendSensorsDataTask(void*pvParameters){
 		transmissionVidSendSensorData(&RHS_sensorData);
 		transmissionVidSendEnd();
 		communicationVidDeselectSlave();
+		vTaskDelete(NULL);
 	}
 }
 // initialize perception layer function
@@ -148,7 +149,7 @@ void perceptionVidBegin(void){
 			"sendDataTask",
 			512,
 			NULL,
-			2,
+			4,
 			NULL
 	);
 }

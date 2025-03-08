@@ -9,7 +9,6 @@
 #include "task.h"
 #include "../HAL/ultraSonic/ultraSonic.h"
 #include "../typesDefinition/types.h"
-#include "../../communication/communication.h"
 #include "../communication/transmission/transmission.h"
 #include "./app.h"
 
@@ -111,13 +110,9 @@ void perceptionVidCheckOverFlowTask(void*pvParameters){
 void perceptionVidSendSensorsDataTask(void*pvParameters){
 	while(1){
 		vTaskDelay(50);
-		communicationVidSelectSlave();
-		transmissionVidSendStart();
 		transmissionVidSendSensorData(&FRONT_sensorData);
 		transmissionVidSendSensorData(&LHS_sensorData);
 		transmissionVidSendSensorData(&RHS_sensorData);
-		transmissionVidSendEnd();
-		communicationVidDeselectSlave();
 	}
 }
 // initialize perception layer function

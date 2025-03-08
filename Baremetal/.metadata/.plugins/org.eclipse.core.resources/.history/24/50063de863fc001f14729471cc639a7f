@@ -10,6 +10,5 @@
 
 #define TRANSMISSION_PERIPHERAL 			SPI2
 void transmissionVidSendSensorData(sensorTypeDef*);
-void transmissionVidSendStart();
-void transmissionVidSendEnd();
+
 #endif /* PERCEPTION_COMMUNICATION_TRANSMISSION_TRANSMISSION_H_ */

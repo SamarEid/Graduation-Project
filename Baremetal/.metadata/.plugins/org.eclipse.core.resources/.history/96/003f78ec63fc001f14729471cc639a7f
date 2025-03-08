@@ -18,9 +18,4 @@ void transmissionVidSendSensorData(sensorTypeDef*sensorData){
 		SPI_I2S_SendData(TRANSMISSION_PERIPHERAL , *(serialData + i));
 	}
 }
-void transmissionVidSendStart(){
-	SPI_I2S_SendData(TRANSMISSION_PERIPHERAL , START_FRAME);
-}
-void transmissionVidSendEnd(){
-	SPI_I2S_SendData(TRANSMISSION_PERIPHERAL , END_FRAME);
-}
+
