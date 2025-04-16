@@ -1,0 +1,20 @@
+{
+  "mqtt": {
+    "port_number": 1883,
+    "keep_alive_interval": 10,
+    "broker_name": "localhost"
+  },
+  "spi": {
+    "mode": 0,
+    "bus": 0,
+    "device": 0,
+    "max_speed_hz": 50000
+  },
+  "topics": {
+    "front": "sensors/front",
+    "left": "sensors/left",
+    "right": "sensors/right",
+    "heartbeat": "sensors/heartbeat",
+    "break": "actuators/break"
+  }
+}
