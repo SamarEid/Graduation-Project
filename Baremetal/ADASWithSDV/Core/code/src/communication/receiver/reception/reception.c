@@ -1,0 +1,23 @@
+/*
+ * reception.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_spi.h"
+#include "../../communication.h"
+#include "./reception.h"
+extern SPI_HandleTypeDef hspi2 ;
+
+uint8_t receptionCharReceiveCommand(){
+	uint8_t command;
+	if(communicationCharGetTriggerPinValue() == RESET){
+		  return 0xff;
+	}
+	communicationVidSelectSlave();
+	while(__HAL_SPI_GET_FLAG(&hspi2, SPI_FLAG_RXNE) != SET);
+	HAL_SPI_Receive(&hspi2, &command, 1, HAL_MAX_DELAY);
+	communicationVidDeselectSlave();
+	return command;
+}

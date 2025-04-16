@@ -1,5 +1,5 @@
-PROBLEMS_FILTERS_MIGRATE=true
+EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
 eclipse.preferences.version=1
-platformState=1732443861950
+platformState=1739024825220
 quickStart=false
 tipsAndTricks=true

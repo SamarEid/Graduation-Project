@@ -1,0 +1,14 @@
+/*
+ * serialization.h
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+
+#ifndef COMMUNICATION_SENDER_FORMATTER_SERIALIZATION_H_
+#define COMMUNICATION_SENDER_FORMATTER_SERIALIZATION_H_
+
+	uint8_t* serializeSensorData(sensorTypeDef*);
+
+
+#endif /* COMMUNICATION_SENDER_FORMATTER_SERIALIZATION_H_ */

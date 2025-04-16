@@ -1,0 +1,34 @@
+/*
+ * motor.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_gpio.h"
+#include "stm32f4xx_hal_tim.h"
+#include "./motor.h"
+
+void motorVidinit(motorInitTypeDef*motor){
+    /*
+     * init GPIO PINS
+     * IN1 PIN as output and reset it
+    */
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = motor->in1GPIOxPin;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(motor->in1GPIOx, &GPIO_InitStruct);
+    HAL_GPIO_WritePin(motor->in1GPIOx,motor->in1GPIOxPin , GPIO_PIN_RESET);
+    // IN2 PIN as output and reset it
+    GPIO_InitStruct.Pin = motor->in2GPIOxPin;
+    HAL_GPIO_Init(motor->in2GPIOx, &GPIO_InitStruct);
+    HAL_GPIO_WritePin(motor->in2GPIOx,motor->in2GPIOxPin , GPIO_PIN_RESET);
+    // EN pin to its alternate function
+    GPIO_InitStruct.Pin = motor->enGPIOxPin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Alternate = motor->GPIOEnPinAF;
+    HAL_GPIO_Init(motor->enGPIOx, &GPIO_InitStruct);
+}

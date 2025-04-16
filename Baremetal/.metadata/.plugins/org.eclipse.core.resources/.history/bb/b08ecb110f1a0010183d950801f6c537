@@ -1,0 +1,23 @@
+/*
+ * ultraSonic.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_gpio.h"
+#include "stm32f4xx_hal_tim.h"
+#include "./ultraSonic.h"
+void ultraSonicVidInit(ultraSonicInitTypeDef*usSensor){
+	// init GPIO to its alternate functions
+    GPIO_InitTypeDef gpioPinInitStructure = {0};
+    gpioPinInitStructure.Pin = GPIO_PIN_5;
+    gpioPinInitStructure.Mode = GPIO_MODE_AF_PP;
+    gpioPinInitStructure.Pull = GPIO_NOPULL;
+    gpioPinInitStructure.Speed = GPIO_SPEED_FREQ_LOW;
+    gpioPinInitStructure.Alternate = GPIO_AF1_TIM2;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+}
+void ultraSonicVidStart(ultraSonicInitTypeDef*){
+
+}

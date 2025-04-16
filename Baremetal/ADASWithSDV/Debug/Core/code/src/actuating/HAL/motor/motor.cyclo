@@ -1,0 +1,5 @@
+../Core/code/src/actuating/HAL/motor/motor.c:12:6:motorVidinit	1
+../Core/code/src/actuating/HAL/motor/motor.c:51:6:motorVidStart	1
+../Core/code/src/actuating/HAL/motor/motor.c:59:6:motorVidSetSpeed	2
+../Core/code/src/actuating/HAL/motor/motor.c:66:6:motorVidSetMotorDirection	5
+../Core/code/src/actuating/HAL/motor/motor.c:80:6:motorVidStop	1

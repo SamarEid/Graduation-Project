@@ -1,0 +1,5 @@
+../Core/code/src/perception/app/app.c:77:6:HAL_TIM_IC_CaptureCallback	24	static
+../Core/code/src/perception/app/app.c:87:6:perceptionVidCheckOverFlowTask	16	static
+../Core/code/src/perception/app/app.c:95:6:perceptionVidSendSensorsDataTask	16	static
+../Core/code/src/perception/app/app.c:107:6:perceptionVidInit	8	static
+../Core/code/src/perception/app/app.c:117:6:perceptionVidBegin	88	static

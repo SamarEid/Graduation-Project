@@ -1,0 +1,4 @@
+../Core/code/src/communication/communication.c:13:6:communicationVidInit	1
+../Core/code/src/communication/communication.c:53:6:communicationVidSelectSlave	1
+../Core/code/src/communication/communication.c:56:6:communicationVidDeselectSlave	2
+../Core/code/src/communication/communication.c:60:9:communicationCharGetTriggerPinValue	1

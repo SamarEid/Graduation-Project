@@ -1,0 +1,5 @@
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:11:6:ultraSonicVidInit	80	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:67:6:ultraSonicVidStart	16	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:72:7:ultraSonicFloatGetDistance	24	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:80:6:ultraSonicInputCaptureHandler	32	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:93:6:ultraSonicCheckOverFlow	16	static

@@ -1,0 +1,97 @@
+/*
+ * ultraSonic.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_gpio.h"
+#include "stm32f4xx_hal_tim.h"
+#include "./ultraSonic.h"
+void ultraSonicVidInit(ultraSonicInitTypeDef* sensor) {
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    TIM_OC_InitTypeDef sConfigOC = {0};
+    TIM_IC_InitTypeDef sConfigIC = {0};
+	TIM_HandleTypeDef htimTrigger ; // Trigger
+	TIM_HandleTypeDef htimEcho; // Echo
+    // === Trigger Pin Init ===
+    GPIO_InitStruct.Pin = sensor->GPIOxTriggerPin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Alternate = sensor->GPIOxTriggerPinAF;
+    HAL_GPIO_Init(sensor->GPIOxTrigger, &GPIO_InitStruct);
+
+    // Timer Base for PWM (Trigger)
+    htimTrigger.Instance = sensor->TIMxTrigger;
+    htimTrigger.Init->Prescaler = GET_PSC();
+    htimTrigger.Init->AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+    htimTrigger.Init->ClockDivision = TIMER_CLOCK_DIVISON;
+    htimTrigger.Init->CounterMode  = TIM_COUNTERMODE_UP;
+    htimTrigger.Init->Period = GET_RESET_VALUE();
+    HAL_TIM_PWM_Init(&htimTrigger);
+
+    sConfigOC.OCMode = TIM_OCMODE_PWM1;
+    sConfigOC.Pulse = GET_ARR();
+    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+    HAL_TIM_PWM_ConfigChannel(&htimTrigger, &sConfigOC, sensor->TIMxTrigger_Channel);
+
+//    // === Echo Pin Init ===
+//    GPIO_InitStruct.Pin = sensor->GPIOxEchoPin;
+//    GPIO_InitStruct.Alternate = sensor->GPIOxEchoPinAF;
+//    HAL_GPIO_Init(sensor->GPIOxEcho, &GPIO_InitStruct);
+//
+//    // Timer Base for Echo Capture
+//    sensor->htimEcho->Instance->PSC = GET_PSC();
+//    sensor->htimEcho->Instance->ARR = 0xFFFF;
+//    HAL_TIM_IC_Init(sensor->htimEcho);
+//
+//    // Input Capture Channel Config
+//    sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_BOTHEDGE;
+//    sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+//    sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+//    sConfigIC.ICFilter = DIGITAL_FILTER;
+//    HAL_TIM_IC_ConfigChannel(sensor->htimEcho, &sConfigIC, ECHO_CHANNEL);
+
+    // Enable interrupts
+//    __HAL_TIM_ENABLE_IT(sensor->htimEcho, IT_CC_CHANNEL);
+//    HAL_NVIC_SetPriority(sensor->EchoIRQ, ECHO_PRIORITY, 0);
+//    HAL_NVIC_EnableIRQ(sensor->EchoIRQ);
+}
+
+void ultraSonicVidStart(ultraSonicInitTypeDef* sensor) {
+    //HAL_TIM_PWM_Start(sensor->htimTrigger, sensor->TIMxTrigger_Channel);
+    //HAL_TIM_IC_Start_IT(sensor->htimEcho, ECHO_CHANNEL);
+}
+
+float ultraSonicFloatGetDistance(uint32_t* firstICVal, uint32_t* secondICVal) {
+    uint32_t diff = (*secondICVal >= *firstICVal)
+                    ? (*secondICVal - *firstICVal)
+                    : (0xFFFF - *firstICVal + *secondICVal);
+    return ((float)SOUND_SPEED * (diff / (float)TICK_FREQUENCY)) / 2.0f;
+}
+
+void ultraSonicInputCaptureHandler(TIM_HandleTypeDef* htim, uint32_t* firstICVal, uint32_t* secondICVal, float* distance, uint8_t* flag) {
+    if (__HAL_TIM_GET_FLAG(htim, TIM_FLAG_CC1) != RESET && __HAL_TIM_GET_IT_SOURCE(htim, IT_CC_CHANNEL) != RESET) {
+        __HAL_TIM_CLEAR_IT(htim, IT_CC_CHANNEL);
+        uint32_t capturedValue = HAL_TIM_ReadCapturedValue(htim, ECHO_CHANNEL);
+
+        if (*flag == FIRST_CAPTURE) {
+            *firstICVal = capturedValue;
+            *flag = SECOND_CAPTURE;
+        } else {
+            *secondICVal = capturedValue;
+            *flag = FIRST_CAPTURE;
+            *distance = ultraSonicFloatGetDistance(firstICVal, secondICVal);
+            *firstICVal = *secondICVal = 0;
+        }
+    }
+}
+
+void ultraSonicCheckOverFlow(TIM_HandleTypeDef* htim, uint8_t* flag) {
+    if (__HAL_TIM_GET_FLAG(htim, TIM_FLAG_UPDATE) != RESET) {
+        __HAL_TIM_CLEAR_FLAG(htim, TIM_FLAG_UPDATE);
+        *flag = FIRST_CAPTURE;
+    }
+}
