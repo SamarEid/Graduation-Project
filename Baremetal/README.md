@@ -6,9 +6,9 @@ The bare-metal portion of the ADAS with SDV (Advanced Driving Assistance Systems
 
 ### ADAS features
 
-<img src="https://www.google.com/imgres?q=ADAS%20features&imgurl=https%3A%2F%2Fmulticorewareinc.com%2Fwp-content%2Fuploads%2F2023%2F12%2FADAS-Features-1.png&imgrefurl=https%3A%2F%2Fmulticorewareinc.com%2Fwhat-we-do%2Fautonomous-mobility%2Fl2-adas%2F&docid=QgGDbxgyByffeM&tbnid=JmN8c0EBIWE7cM&vet=12ahUKEwif0--e_t6MAxVk2AIHHePNLOwQM3oECFIQAA..i&w=1050&h=591&hcb=2&ved=2ahUKEwif0--e_t6MAxVk2AIHHePNLOwQM3oECFIQAA" alt= "ADAS features"width="80%">
+<img src="https://www.google.com/imgres?q=ADAS%20features&imgurl=https%3A%2F%2Fmulticorewareinc.com%2Fwp-content%2Fuploads%2F2023%2F12%2FADAS-Features-1.png&imgrefurl=https%3A%2F%2Fmulticorewareinc.com%2Fwhat-we-do%2Fautonomous-mobility%2Fl2-adas%2F&docid=QgGDbxgyByffeM&tbnid=JmN8c0EBIWE7cM&vet=12ahUKEwif0--e_t6MAxVk2AIHHePNLOwQM3oECFIQAA..i&w=1050&h=591&hcb=2&ved=2ahUKEwif0--e_t6MAxVk2AIHHePNLOwQM3oECFIQAA" alt= "ADAS features" width="80%">
 
 ### System Layers
 
-<img src="https://drive.google.com/file/d/1oaJKghN1sxcyIawu-7ZjdE_tQGuxs5cc/view?usp=sharing" alt="SDV Architecture" width="80%">
+<img src="./assets/img/architecture.drawio.png" alt="SDV Architecture" width="80%">
 
