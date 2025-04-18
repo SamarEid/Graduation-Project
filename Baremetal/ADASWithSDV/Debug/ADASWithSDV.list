@@ -2691,8 +2691,8 @@ void perceptionVidCheckOverFlowTask(void*pvParameters){
  80012f0:	af00      	add	r7, sp, #0
  80012f2:	6078      	str	r0, [r7, #4]
 	for(;;){
-		osDelay(38);
- 80012f4:	2026      	movs	r0, #38	@ 0x26
+		osDelay(40);
+ 80012f4:	2028      	movs	r0, #40	@ 0x28
  80012f6:	f003 f93f 	bl	8004578 <osDelay>
         osKernelLock();
  80012fa:	f003 f853 	bl	80043a4 <osKernelLock>
@@ -2710,7 +2710,7 @@ void perceptionVidCheckOverFlowTask(void*pvParameters){
  8001312:	f7ff ff77 	bl	8001204 <ultraSonicCheckOverFlow>
 	    osKernelUnlock();
  8001316:	f003 f86b 	bl	80043f0 <osKernelUnlock>
-		osDelay(38);
+		osDelay(40);
  800131a:	bf00      	nop
  800131c:	e7ea      	b.n	80012f4 <perceptionVidCheckOverFlowTask+0x8>
  800131e:	bf00      	nop
