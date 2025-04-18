@@ -3281,3 +3281,780 @@ arm-none-eabi-size  ADASWithSDV.elf
   26644	    344	  21352	  48340	   bcd4	ADASWithSDV.elf
 Finished building: default.size.stdout
  
+17:20:51 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+   text	   data	    bss	    dec	    hex	filename
+  30704	    356	  21364	  52424	   ccc8	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+17:21:46 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30704	    356	  21364	  52424	   ccc8	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:23:41 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30704	    356	  21364	  52424	   ccc8	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:26:01 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30704	    356	  21364	  52424	   ccc8	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:35:54 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+17:36:01 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:36:28 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:36:57 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:39:20 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:41:3: warning: implicit declaration of function '__HAL_RCC_DBGMCU_CLK_ENABLE' [-Wimplicit-function-declaration]
+   41 |   __HAL_RCC_DBGMCU_CLK_ENABLE();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+D:\Program Files\en.st-stm32cubeide_1.16.1_22882_20240916_0822_x86_64.exe\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+D:/Graduation-Project/Baremetal/ADASWithSDV/Debug/../Core/Src/main.c:41: undefined reference to `__HAL_RCC_DBGMCU_CLK_ENABLE'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:80: ADASWithSDV.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:39:49 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+17:40:02 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:50:40 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:51:00 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:52:46 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:53:04 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:53:21 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:54:04 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:56:45 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+17:58:24 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:00:11 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30656	    356	  21364	  52376	   cc98	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:01:41 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  25524	    356	  19124	  45004	   afcc	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+18:01:55 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25524	    356	  19124	  45004	   afcc	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:02:43 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25524	    356	  19124	  45004	   afcc	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:06:08 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26580	    344	  21352	  48276	   bc94	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+18:06:15 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26580	    344	  21352	  48276	   bc94	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:18:05 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:81:35: error: 'GPIO_PIN4' undeclared (first use in this function); did you mean 'GPIO_PIN_4'?
+   81 |         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN4);
+      |                                   ^~~~~~~~~
+      |                                   GPIO_PIN_4
+../Core/code/src/perception/app/app.c:81:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/code/src/perception/app/app.c: In function 'perceptionVidBegin':
+../Core/code/src/perception/app/app.c:126:22: warning: variable 'sendDataTaskHandle' set but not used [-Wunused-but-set-variable]
+  126 |         osThreadId_t sendDataTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:120:22: warning: variable 'checkOVFTaskHandle' set but not used [-Wunused-but-set-variable]
+  120 |         osThreadId_t checkOVFTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/code/src/perception/app/subdir.mk:19: Core/code/src/perception/app/app.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:18:25 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'perceptionVidBegin':
+../Core/code/src/perception/app/app.c:126:22: warning: variable 'sendDataTaskHandle' set but not used [-Wunused-but-set-variable]
+  126 |         osThreadId_t sendDataTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:120:22: warning: variable 'checkOVFTaskHandle' set but not used [-Wunused-but-set-variable]
+  120 |         osThreadId_t checkOVFTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26692	    344	  21352	  48388	   bd04	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+18:21:57 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26692	    344	  21352	  48388	   bd04	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:26:24 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26692	    344	  21352	  48388	   bd04	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:27:33 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26692	    344	  21352	  48388	   bd04	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:31:59 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26692	    344	  21352	  48388	   bd04	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:32:04 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26692	    344	  21352	  48388	   bd04	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:32:30 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26692	    344	  21352	  48388	   bd04	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:34:08 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26692	    344	  21352	  48388	   bd04	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:35:56 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26692	    344	  21352	  48388	   bd04	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:38:37 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+Finished building: ADASWithSDV.list
+ 
+ 
+18:38:51 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:38:55 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:39:41 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'perceptionVidBegin':
+../Core/code/src/perception/app/app.c:125:22: warning: variable 'sendDataTaskHandle' set but not used [-Wunused-but-set-variable]
+  125 |         osThreadId_t sendDataTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:119:22: warning: variable 'checkOVFTaskHandle' set but not used [-Wunused-but-set-variable]
+  119 |         osThreadId_t checkOVFTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26788	    344	  21352	  48484	   bd64	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+18:39:48 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26788	    344	  21352	  48484	   bd64	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:40:08 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26788	    344	  21352	  48484	   bd64	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:42:45 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26788	    344	  21352	  48484	   bd64	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+18:42:52 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26788	    344	  21352	  48484	   bd64	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:43:11 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26788	    344	  21352	  48484	   bd64	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:44:31 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+18:44:42 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:45:17 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:46:05 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+18:46:10 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:47:11 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+18:47:18 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:49:10 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26788	    344	  21352	  48484	   bd64	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+18:49:17 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26788	    344	  21352	  48484	   bd64	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+18:55:06 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26788	    344	  21352	  48484	   bd64	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+19:01:29 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+arm-none-eabi-gcc "../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/HAL/ultraSonic/ultraSonic.d" -MT"Core/code/src/perception/HAL/ultraSonic/ultraSonic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/HAL/ultraSonic/ultraSonic.o"
+../Core/code/src/perception/app/app.c: In function 'perceptionVidBegin':
+../Core/code/src/perception/app/app.c:125:22: warning: variable 'sendDataTaskHandle' set but not used [-Wunused-but-set-variable]
+  125 |         osThreadId_t sendDataTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:119:22: warning: variable 'checkOVFTaskHandle' set but not used [-Wunused-but-set-variable]
+  119 |         osThreadId_t checkOVFTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26756	    344	  21352	  48452	   bd44	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+19:01:34 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26756	    344	  21352	  48452	   bd44	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+19:20:18 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+arm-none-eabi-gcc "../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/HAL/ultraSonic/ultraSonic.d" -MT"Core/code/src/perception/HAL/ultraSonic/ultraSonic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/HAL/ultraSonic/ultraSonic.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:80:46: warning: passing argument 2 of 'ultraSonicInputCaptureHandler' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   80 |         ultraSonicInputCaptureHandler(&htim3,&FRONT_firstCap,&FRONT_secondCap,(float*)(&FRONT_sensorData.sensorData),&FRONT_flag);
+      |                                              ^~~~~~~~~~~~~~~
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:50:56: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'volatile uint32_t *' {aka 'volatile long unsigned int *'}
+   50 | void ultraSonicInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*, float*, uint8_t*);
+      |                                                        ^~~~~~~~~
+../Core/code/src/perception/app/app.c:80:62: warning: passing argument 3 of 'ultraSonicInputCaptureHandler' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   80 |         ultraSonicInputCaptureHandler(&htim3,&FRONT_firstCap,&FRONT_secondCap,(float*)(&FRONT_sensorData.sensorData),&FRONT_flag);
+      |                                                              ^~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:50:67: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'volatile uint32_t *' {aka 'volatile long unsigned int *'}
+   50 | void ultraSonicInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*, float*, uint8_t*);
+      |                                                                   ^~~~~~~~~
+../Core/code/src/perception/app/app.c:80:118: warning: passing argument 5 of 'ultraSonicInputCaptureHandler' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   80 |         ultraSonicInputCaptureHandler(&htim3,&FRONT_firstCap,&FRONT_secondCap,(float*)(&FRONT_sensorData.sensorData),&FRONT_flag);
+      |                                                                                                                      ^~~~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:50:86: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   50 | void ultraSonicInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*, float*, uint8_t*);
+      |                                                                                      ^~~~~~~~
+../Core/code/src/perception/app/app.c:82:46: warning: passing argument 2 of 'ultraSonicInputCaptureHandler' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   82 |         ultraSonicInputCaptureHandler(&htim4,&LHS_firstCap,&LHS_secondCap,(float*)(&LHS_sensorData.sensorData),&LHS_flag);
+      |                                              ^~~~~~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:50:56: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'volatile uint32_t *' {aka 'volatile long unsigned int *'}
+   50 | void ultraSonicInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*, float*, uint8_t*);
+      |                                                        ^~~~~~~~~
+../Core/code/src/perception/app/app.c:82:60: warning: passing argument 3 of 'ultraSonicInputCaptureHandler' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   82 |         ultraSonicInputCaptureHandler(&htim4,&LHS_firstCap,&LHS_secondCap,(float*)(&LHS_sensorData.sensorData),&LHS_flag);
+      |                                                            ^~~~~~~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:50:67: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'volatile uint32_t *' {aka 'volatile long unsigned int *'}
+   50 | void ultraSonicInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*, float*, uint8_t*);
+      |                                                                   ^~~~~~~~~
+../Core/code/src/perception/app/app.c:82:112: warning: passing argument 5 of 'ultraSonicInputCaptureHandler' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   82 |         ultraSonicInputCaptureHandler(&htim4,&LHS_firstCap,&LHS_secondCap,(float*)(&LHS_sensorData.sensorData),&LHS_flag);
+      |                                                                                                                ^~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:50:86: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   50 | void ultraSonicInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*, float*, uint8_t*);
+      |                                                                                      ^~~~~~~~
+../Core/code/src/perception/app/app.c:84:46: warning: passing argument 2 of 'ultraSonicInputCaptureHandler' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   84 |         ultraSonicInputCaptureHandler(&htim5,&RHS_firstCap,&RHS_secondCap,(float*)(&RHS_sensorData.sensorData),&RHS_flag);
+      |                                              ^~~~~~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:50:56: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'volatile uint32_t *' {aka 'volatile long unsigned int *'}
+   50 | void ultraSonicInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*, float*, uint8_t*);
+      |                                                        ^~~~~~~~~
+../Core/code/src/perception/app/app.c:84:60: warning: passing argument 3 of 'ultraSonicInputCaptureHandler' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   84 |         ultraSonicInputCaptureHandler(&htim5,&RHS_firstCap,&RHS_secondCap,(float*)(&RHS_sensorData.sensorData),&RHS_flag);
+      |                                                            ^~~~~~~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:50:67: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'volatile uint32_t *' {aka 'volatile long unsigned int *'}
+   50 | void ultraSonicInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*, float*, uint8_t*);
+      |                                                                   ^~~~~~~~~
+../Core/code/src/perception/app/app.c:84:112: warning: passing argument 5 of 'ultraSonicInputCaptureHandler' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   84 |         ultraSonicInputCaptureHandler(&htim5,&RHS_firstCap,&RHS_secondCap,(float*)(&RHS_sensorData.sensorData),&RHS_flag);
+      |                                                                                                                ^~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:50:86: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   50 | void ultraSonicInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*, float*, uint8_t*);
+      |                                                                                      ^~~~~~~~
+../Core/code/src/perception/app/app.c: In function 'perceptionVidCheckOverFlowTask':
+../Core/code/src/perception/app/app.c:90:48: warning: passing argument 2 of 'ultraSonicCheckOverFlow' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   90 |                 ultraSonicCheckOverFlow(&htim3,&FRONT_flag);
+      |                                                ^~~~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:52:50: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   52 | void ultraSonicCheckOverFlow(TIM_HandleTypeDef*, uint8_t*);
+      |                                                  ^~~~~~~~
+../Core/code/src/perception/app/app.c:91:48: warning: passing argument 2 of 'ultraSonicCheckOverFlow' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   91 |                 ultraSonicCheckOverFlow(&htim4,&LHS_flag);
+      |                                                ^~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:52:50: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   52 | void ultraSonicCheckOverFlow(TIM_HandleTypeDef*, uint8_t*);
+      |                                                  ^~~~~~~~
+../Core/code/src/perception/app/app.c:92:48: warning: passing argument 2 of 'ultraSonicCheckOverFlow' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   92 |                 ultraSonicCheckOverFlow(&htim5,&RHS_flag);
+      |                                                ^~~~~~~~~
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:52:50: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
+   52 | void ultraSonicCheckOverFlow(TIM_HandleTypeDef*, uint8_t*);
+      |                                                  ^~~~~~~~
+../Core/code/src/perception/app/app.c: In function 'perceptionVidBegin':
+../Core/code/src/perception/app/app.c:125:22: warning: variable 'sendDataTaskHandle' set but not used [-Wunused-but-set-variable]
+  125 |         osThreadId_t sendDataTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:119:22: warning: variable 'checkOVFTaskHandle' set but not used [-Wunused-but-set-variable]
+  119 |         osThreadId_t checkOVFTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26756	    344	  21352	  48452	   bd44	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+Finished building: ADASWithSDV.list
+ 
+ 
+19:20:47 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/HAL/ultraSonic/ultraSonic.d" -MT"Core/code/src/perception/HAL/ultraSonic/ultraSonic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/HAL/ultraSonic/ultraSonic.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+19:20:52 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+19:21:17 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+19:23:12 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+19:23:24 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+19:42:15 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+Finished building: ADASWithSDV.list
+ 
+ 
+19:42:22 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26804	    344	  21352	  48500	   bd74	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+19:42:55 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  26596	    344	  21352	  48292	   bca4	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+19:43:01 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26596	    344	  21352	  48292	   bca4	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 

@@ -56,9 +56,7 @@
 
 /* External variables --------------------------------------------------------*/
 extern TIM_HandleTypeDef htim10;
-extern TIM_HandleTypeDef htim3;
-extern TIM_HandleTypeDef htim4;
-extern TIM_HandleTypeDef htim5;
+
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -174,15 +172,7 @@ void TIM1_UP_TIM10_IRQHandler(void)
 
   /* USER CODE END TIM1_UP_TIM10_IRQn 1 */
 }
-void TIM3_IRQHandler(){
-	HAL_TIM_IRQHandler(&htim3);
-}
-void TIM4_IRQHandler(){
-	HAL_TIM_IRQHandler(&htim4);
-}
-void TIM5_IRQHandler(){
-	HAL_TIM_IRQHandler(&htim5);
-}
+
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */

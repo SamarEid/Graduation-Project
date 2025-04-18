@@ -64,10 +64,10 @@ ultraSonicInitTypeDef RHS_ultraSonic = {
 };
 
 // define variables for ultraSonic capture unit handlers
-uint32_t LHS_firstCap = 0	, LHS_secondCap = 0,
+volatile uint32_t LHS_firstCap = 0	, LHS_secondCap = 0,
 		 RHS_firstCap = 0	, RHS_secondCap = 0,
 		 FRONT_firstCap = 0	, FRONT_secondCap = 0;
-uint8_t  LHS_flag = 0, RHS_flag = 0, FRONT_flag = 0;
+volatile uint8_t  LHS_flag = 0, RHS_flag = 0, FRONT_flag = 0;
 
 //define variables of sensors Dat4
 sensorTypeDef FRONT_sensorData 	= {1,4.00};
@@ -89,7 +89,7 @@ void perceptionVidCheckOverFlowTask(void*pvParameters){
 		osDelay(1);
 		ultraSonicCheckOverFlow(&htim3,&FRONT_flag);
 		ultraSonicCheckOverFlow(&htim4,&LHS_flag);
-		ultraSonicCheckOverFlow(&htim4,&RHS_flag);
+		ultraSonicCheckOverFlow(&htim5,&RHS_flag);
 	}
 }
 void perceptionVidSendSensorsDataTask(void*pvParameters){

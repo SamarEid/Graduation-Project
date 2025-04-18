@@ -1,10 +1,10 @@
-20:40:54 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+19:43:01 **** Incremental Build of configuration Debug for project ADASWithSDV ****
 make -j8 all 
 arm-none-eabi-size  ADASWithSDV.elf 
    text	   data	    bss	    dec	    hex	filename
-  26644	    344	  21352	  48340	   bcd4	ADASWithSDV.elf
+  26596	    344	  21352	  48292	   bca4	ADASWithSDV.elf
 Finished building: default.size.stdout
  
 
-20:40:55 Build Finished. 0 errors, 0 warnings. (took 598ms)
+19:43:02 Build Finished. 0 errors, 0 warnings. (took 542ms)
 
