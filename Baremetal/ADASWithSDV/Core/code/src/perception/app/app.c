@@ -13,10 +13,14 @@
 #include "./app.h"
 
 // define timer handlers
-TIM_HandleTypeDef htim2 = {0};
-TIM_HandleTypeDef htim3 = {0};
-TIM_HandleTypeDef htim4 = {0};
-TIM_HandleTypeDef htim5 = {0};
+volatile TIM_HandleTypeDef htim2 = {0};
+volatile TIM_HandleTypeDef htim3 = {0};
+volatile TIM_HandleTypeDef htim4 = {0};
+volatile TIM_HandleTypeDef htim5 = {0};
+osMutexId_t sensorDataMutex;
+const osMutexAttr_t sensorDataMutex_attr = {
+    .name = "sensorDataMutex"
+};
 // ultraSonic structs to initialize sensors to its pins and timers
 ultraSonicInitTypeDef FRONT_ultraSonic = {
 		.GPIOxTrigger = GPIOA,
@@ -76,6 +80,7 @@ sensorTypeDef RHS_sensorData 	= {3,4.00};
 //input capture unit handlers
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
+	osKernelLock();
     if (htim->Instance == TIM3) {
         ultraSonicInputCaptureHandler(&htim3,&FRONT_firstCap,&FRONT_secondCap,(float*)(&FRONT_sensorData.sensorData),&FRONT_flag);
     }else if (htim->Instance == TIM4){
@@ -83,28 +88,41 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
     }else if (htim->Instance == TIM5){
         ultraSonicInputCaptureHandler(&htim5,&RHS_firstCap,&RHS_secondCap,(float*)(&RHS_sensorData.sensorData),&RHS_flag);
     }
+    osKernelUnlock();
 }
 void perceptionVidCheckOverFlowTask(void*pvParameters){
 	for(;;){
 		osDelay(1);
+        osKernelLock();
 		ultraSonicCheckOverFlow(&htim3,&FRONT_flag);
 		ultraSonicCheckOverFlow(&htim4,&LHS_flag);
 		ultraSonicCheckOverFlow(&htim5,&RHS_flag);
+	    osKernelUnlock();
 	}
 }
 void perceptionVidSendSensorsDataTask(void*pvParameters){
+	sensorTypeDef safeFRONT ={0}, safeLHS={0}, safeRHS={0};
+
 	for(;;){
 		osDelay(50);
+		if (osMutexAcquire(sensorDataMutex, osWaitForever) == osOK) {
+			safeFRONT = FRONT_sensorData;
+		    safeLHS   = LHS_sensorData;
+		    safeRHS   = RHS_sensorData;
+		    osMutexRelease(sensorDataMutex);
+		}
 		communicationVidSelectSlave();
 		transmissionVidSendStart();
-		transmissionVidSendSensorData(&FRONT_sensorData);
-		transmissionVidSendSensorData(&LHS_sensorData);
-		transmissionVidSendSensorData(&RHS_sensorData);
+		transmissionVidSendSensorData(&safeFRONT);
+		transmissionVidSendSensorData(&safeLHS);
+		transmissionVidSendSensorData(&safeRHS);
 		transmissionVidSendEnd();
 		communicationVidDeselectSlave();
 	}
 }
 void perceptionVidInit(void){
+	//init mutex
+	sensorDataMutex = osMutexNew(&sensorDataMutex_attr);
 	//init sensors
 	ultraSonicVidInit(&LHS_ultraSonic);
 	ultraSonicVidInit(&RHS_ultraSonic);

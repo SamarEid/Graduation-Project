@@ -73,13 +73,13 @@ float ultraSonicFloatGetDistance(uint32_t* firstICVal, uint32_t* secondICVal) {
 	uint32_t difference = 0;
 	float distance = 0.00;
 	difference = (*secondICVal) - (*firstICVal);
-	distance = ((SOUND_SPEED)*(difference*(1/TICK_FREQUENCY)))/2; // in meters
+	distance =  difference/58; // in cm
 	return distance;
 }
 
 void ultraSonicInputCaptureHandler(TIM_HandleTypeDef* htim, uint32_t* firstICVal, uint32_t* secondICVal, float* distance, uint8_t* flag) {
 	uint32_t capturedValue = HAL_TIM_ReadCapturedValue(htim, ECHO_CHANNEL);
-    if (*flag == FIRST_CAPTURE) {
+	if (*flag == FIRST_CAPTURE) {
     	*firstICVal = capturedValue;
         *flag = SECOND_CAPTURE;
     } else {
@@ -89,6 +89,7 @@ void ultraSonicInputCaptureHandler(TIM_HandleTypeDef* htim, uint32_t* firstICVal
         *firstICVal =0;
         *secondICVal = 0;
     }
+
 }
 void ultraSonicCheckOverFlow(TIM_HandleTypeDef* htim, uint8_t* flag) {
     if (__HAL_TIM_GET_FLAG(htim, TIM_FLAG_UPDATE) != RESET) {

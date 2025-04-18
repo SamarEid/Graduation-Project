@@ -1,5 +1,5 @@
-../Core/code/src/perception/app/app.c:77:6:HAL_TIM_IC_CaptureCallback	4
-../Core/code/src/perception/app/app.c:87:6:perceptionVidCheckOverFlowTask	1
-../Core/code/src/perception/app/app.c:95:6:perceptionVidSendSensorsDataTask	1
-../Core/code/src/perception/app/app.c:107:6:perceptionVidInit	1
-../Core/code/src/perception/app/app.c:117:6:perceptionVidBegin	1
+../Core/code/src/perception/app/app.c:81:6:HAL_TIM_IC_CaptureCallback	4
+../Core/code/src/perception/app/app.c:93:6:perceptionVidCheckOverFlowTask	1
+../Core/code/src/perception/app/app.c:103:6:perceptionVidSendSensorsDataTask	2
+../Core/code/src/perception/app/app.c:123:6:perceptionVidInit	1
+../Core/code/src/perception/app/app.c:135:6:perceptionVidBegin	1
