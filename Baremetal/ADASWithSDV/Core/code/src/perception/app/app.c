@@ -92,7 +92,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 }
 void perceptionVidCheckOverFlowTask(void*pvParameters){
 	for(;;){
-		osDelay(1);
+		osDelay(38);
         osKernelLock();
 		ultraSonicCheckOverFlow(&htim3,&FRONT_flag);
 		ultraSonicCheckOverFlow(&htim4,&LHS_flag);
