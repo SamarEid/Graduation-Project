@@ -1,4 +1,1 @@
-../Core/code/src/communication/sender/transmission/transmission.c:13:6:transmissionVidSendSensorData	24	static
-../Core/code/src/communication/sender/transmission/transmission.c:17:6:transmissionVidSendSingleValue	24	static
-../Core/code/src/communication/sender/transmission/transmission.c:21:6:transmissionVidSendStart	8	static
-../Core/code/src/communication/sender/transmission/transmission.c:25:6:transmissionVidSendEnd	8	static
+../Core/code/src/communication/sender/transmission/transmission.c:15:6:transmissionVidSendSensorData	32	static

@@ -56,6 +56,10 @@
 
 /* External variables --------------------------------------------------------*/
 extern TIM_HandleTypeDef htim10;
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim5;
+
 
 /* USER CODE BEGIN EV */
 
@@ -158,6 +162,17 @@ void DebugMon_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f4xx.s).                    */
 /******************************************************************************/
+void TIM3_IRQHandler(void) {
+    HAL_TIM_IRQHandler(&htim3);
+}
+
+void TIM4_IRQHandler(void) {
+    HAL_TIM_IRQHandler(&htim4);
+}
+
+void TIM5_IRQHandler(void) {
+    HAL_TIM_IRQHandler(&htim5);
+}
 
 /**
   * @brief This function handles TIM1 update interrupt and TIM10 global interrupt.

@@ -12,142 +12,121 @@
 #include "../../communication/sender/transmission/transmission.h"
 #include "./app.h"
 
-// define timer handlers
-volatile TIM_HandleTypeDef htim2 = {0};
-volatile TIM_HandleTypeDef htim3 = {0};
-volatile TIM_HandleTypeDef htim4 = {0};
-volatile TIM_HandleTypeDef htim5 = {0};
-osMutexId_t sensorDataMutex;
-const osMutexAttr_t sensorDataMutex_attr = {
-    .name = "sensorDataMutex"
+// Timer handles
+TIM_HandleTypeDef htim3 = {0};
+TIM_HandleTypeDef htim4 = {0};
+TIM_HandleTypeDef htim5 = {0};
+
+// Queue handle
+osMessageQueueId_t sensorQueueHandle;
+const osMessageQueueAttr_t sensorQueue_attr = {
+    .name = "sensorQueue"
 };
-// ultraSonic structs to initialize sensors to its pins and timers
+// communication mutex handle
+extern osMutexId_t spiMutexHandle;
+// Ultrasonic sensor config
 ultraSonicInitTypeDef FRONT_ultraSonic = {
-		.GPIOxTrigger = GPIOA,
-		.GPIOxEcho = GPIOA,
-		.GPIOxTriggerPin = GPIO_PIN_3,
-		.GPIOxEchoPin = GPIO_PIN_6,
-		.GPIOxTriggerPinAF = GPIO_AF1_TIM2,
-		.GPIOxEchoPinAF = GPIO_AF2_TIM3,
-		.TIMxTrigger = TIM2,
-		.TIMxEcho = TIM3,
-		.htimTrigger = &htim2,
-		.htimEcho = &htim3,
-		.TIMxTrigger_Channel = TIM_CHANNEL_4,
-		.EchoIRQ = TIM3_IRQn,
+    .GPIOxTrigger = GPIOA,
+    .GPIOxEcho = GPIOA,
+    .GPIOxTriggerPin = GPIO_PIN_3,
+    .GPIOxEchoPin = GPIO_PIN_6,
+    .GPIOxEchoPinAF = GPIO_AF2_TIM3,
+    .TIMxEcho = TIM3,
+    .htimEcho = &htim3,
+    .EchoIRQ = TIM3_IRQn,
 };
 
 ultraSonicInitTypeDef LHS_ultraSonic = {
-		.GPIOxTrigger = GPIOB,
-		.GPIOxEcho = GPIOB,
-		.GPIOxTriggerPin = GPIO_PIN_3,
-		.GPIOxEchoPin = GPIO_PIN_6,
-		.GPIOxTriggerPinAF = GPIO_AF1_TIM2,
-		.GPIOxEchoPinAF = GPIO_AF2_TIM4,
-		.TIMxTrigger = TIM2,
-		.TIMxEcho = TIM4,
-		.htimTrigger = &htim2,
-		.htimEcho = &htim4,
-		.TIMxTrigger_Channel = TIM_CHANNEL_2,
-		.EchoIRQ = TIM4_IRQn,
+    .GPIOxTrigger = GPIOB,
+    .GPIOxEcho = GPIOB,
+    .GPIOxTriggerPin = GPIO_PIN_3,
+    .GPIOxEchoPin = GPIO_PIN_6,
+    .GPIOxEchoPinAF = GPIO_AF2_TIM4,
+    .TIMxEcho = TIM4,
+    .htimEcho = &htim4,
+    .EchoIRQ = TIM4_IRQn,
 };
 
 ultraSonicInitTypeDef RHS_ultraSonic = {
-		.GPIOxTrigger = GPIOB,
-		.GPIOxEcho = GPIOA,
-		.GPIOxTriggerPin = GPIO_PIN_10,
-		.GPIOxEchoPin = GPIO_PIN_0,
-		.GPIOxTriggerPinAF = GPIO_AF1_TIM2,
-		.GPIOxEchoPinAF = GPIO_AF2_TIM5,
-		.TIMxTrigger = TIM2,
-		.TIMxEcho = TIM5,
-		.htimTrigger = &htim2,
-		.htimEcho = &htim5,
-		.TIMxTrigger_Channel = TIM_CHANNEL_3,
-		.EchoIRQ = TIM5_IRQn,
+    .GPIOxTrigger = GPIOB,
+    .GPIOxEcho = GPIOA,
+    .GPIOxTriggerPin = GPIO_PIN_10,
+    .GPIOxEchoPin = GPIO_PIN_0,
+    .GPIOxEchoPinAF = GPIO_AF2_TIM5,
+    .TIMxEcho = TIM5,
+    .htimEcho = &htim5,
+    .EchoIRQ = TIM5_IRQn,
 };
 
-// define variables for ultraSonic capture unit handlers
-volatile uint32_t LHS_firstCap = 0	, LHS_secondCap = 0,
-		 RHS_firstCap = 0	, RHS_secondCap = 0,
-		 FRONT_firstCap = 0	, FRONT_secondCap = 0;
-volatile uint8_t  LHS_flag = 0, RHS_flag = 0, FRONT_flag = 0;
+volatile uint32_t FRONT_firstCap = 0, FRONT_secondCap = 0;
+volatile uint32_t LHS_firstCap = 0, LHS_secondCap = 0;
+volatile uint32_t RHS_firstCap = 0, RHS_secondCap = 0;
+volatile uint8_t FRONT_flag = 0, LHS_flag= 0, RHS_flag= 0;
 
-//define variables of sensors Dat4
-sensorTypeDef FRONT_sensorData 	= {1,4.00};
-sensorTypeDef LHS_sensorData 	= {2,4.00};
-sensorTypeDef RHS_sensorData 	= {3,4.00};
-//input capture unit handlers
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
-{
-	osKernelLock();
+void sendDataToQueue(uint32_t sensorId, float distance){
+    sensorTypeDef sensorData = { sensorId, distance };
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+    osMessageQueuePut(sensorQueueHandle, &sensorData, 0, 0);
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+}
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
     if (htim->Instance == TIM3) {
-        ultraSonicInputCaptureHandler(&htim3,&FRONT_firstCap,&FRONT_secondCap,(float*)(&FRONT_sensorData.sensorData),&FRONT_flag);
-    }else if (htim->Instance == TIM4){
-        ultraSonicInputCaptureHandler(&htim4,&LHS_firstCap,&LHS_secondCap,(float*)(&LHS_sensorData.sensorData),&LHS_flag);
-    }else if (htim->Instance == TIM5){
-        ultraSonicInputCaptureHandler(&htim5,&RHS_firstCap,&RHS_secondCap,(float*)(&RHS_sensorData.sensorData),&RHS_flag);
+    	ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+    } else if (htim->Instance == TIM4) {
+    	ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+    } else if (htim->Instance == TIM5) {
+    	ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
     }
-    osKernelUnlock();
 }
-void perceptionVidCheckOverFlowTask(void*pvParameters){
+void perceptionVidTriggerSensorsTask(void* pvParameters){
 	for(;;){
+		ultraSonicVidTrig(&FRONT_ultraSonic);
+		ultraSonicVidDelayMicroSeconds(10);
+		ultraSonicVidHaltTrig(&FRONT_ultraSonic);
 		osDelay(40);
-        osKernelLock();
-		ultraSonicCheckOverFlow(&htim3,&FRONT_flag);
-		ultraSonicCheckOverFlow(&htim4,&LHS_flag);
-		ultraSonicCheckOverFlow(&htim5,&RHS_flag);
-	    osKernelUnlock();
+		ultraSonicVidTrig(&LHS_ultraSonic);
+		ultraSonicVidDelayMicroSeconds(10);
+		ultraSonicVidHaltTrig(&LHS_ultraSonic);
+		osDelay(40);
+		ultraSonicVidTrig(&RHS_ultraSonic);
+		ultraSonicVidDelayMicroSeconds(20);
+		ultraSonicVidHaltTrig(&RHS_ultraSonic);
+		osDelay(40);
 	}
 }
-void perceptionVidSendSensorsDataTask(void*pvParameters){
-	sensorTypeDef safeFRONT ={0}, safeLHS={0}, safeRHS={0};
-
-	for(;;){
-		osDelay(50);
-		if (osMutexAcquire(sensorDataMutex, osWaitForever) == osOK) {
-			safeFRONT = FRONT_sensorData;
-		    safeLHS   = LHS_sensorData;
-		    safeRHS   = RHS_sensorData;
-		    osMutexRelease(sensorDataMutex);
-		}
-		communicationVidSelectSlave();
-		transmissionVidSendStart();
-		transmissionVidSendSensorData(&safeFRONT);
-		transmissionVidSendSensorData(&safeLHS);
-		transmissionVidSendSensorData(&safeRHS);
-		transmissionVidSendEnd();
-		communicationVidDeselectSlave();
-	}
+void perceptionVidSendSensorDataTask(void* pvParameters) {
+	sensorTypeDef sensorToSend = {0};
+    for (;;) {
+        osDelay(50);
+        if (osMessageQueueGet(sensorQueueHandle, &sensorToSend , NULL, 0) == osOK) {
+        	osMutexAcquire(spiMutexHandle, osWaitForever);
+        	transmissionVidSendSensorData(&sensorToSend);
+        	osMutexRelease(spiMutexHandle);
+        }
+    }
 }
-void perceptionVidInit(void){
-	//init mutex
-	sensorDataMutex = osMutexNew(&sensorDataMutex_attr);
-	//init sensors
-	ultraSonicVidInit(&LHS_ultraSonic);
-	ultraSonicVidInit(&RHS_ultraSonic);
-	ultraSonicVidInit(&FRONT_ultraSonic);
-	//start sensing
-	ultraSonicVidStart(&FRONT_ultraSonic);
-	ultraSonicVidStart(&LHS_ultraSonic);
-	ultraSonicVidStart(&RHS_ultraSonic);
+void perceptionVidInit(void) {
+    sensorQueueHandle = osMessageQueueNew(10, sizeof(sensorTypeDef), &sensorQueue_attr);
+    ultraSonicVidInit(&FRONT_ultraSonic);
+    ultraSonicVidInit(&LHS_ultraSonic);
+    ultraSonicVidInit(&RHS_ultraSonic);
+    ultraSonicVidStart(&FRONT_ultraSonic);
+    ultraSonicVidStart(&LHS_ultraSonic);
+    ultraSonicVidStart(&RHS_ultraSonic);
 }
-void perceptionVidBegin(void){
-	//define freeRTOS Tasks Parameters
-	osThreadId_t checkOVFTaskHandle;
-	const osThreadAttr_t checkOVFTask_attributes = {
-	  .name = "OVFTask",
-	  .stack_size = 128 * 4,
-	  .priority = (osPriority_t) osPriorityNormal,
-	};
-	osThreadId_t sendDataTaskHandle;
-	const osThreadAttr_t sendDataTask_attributes = {
-	  .name = "sendDataTask",
-	  .stack_size = 128 * 4,
-	  .priority = (osPriority_t) osPriorityLow,
-	};
-	//create tasks
-	checkOVFTaskHandle = osThreadNew(perceptionVidCheckOverFlowTask, NULL, &checkOVFTask_attributes);
-	sendDataTaskHandle = osThreadNew(perceptionVidSendSensorsDataTask, NULL, &sendDataTask_attributes);
 
+void perceptionVidBegin(void) {
+	const osThreadAttr_t sendDateTaskAttr = {
+	    .name = "SendDataTask",
+	    .priority = osPriorityLow,
+	    .stack_size = 128 * 4
+	};
+	const osThreadAttr_t TrigSenorsTaskAttr = {
+			.name = "TriggerSensors",
+		    .priority = osPriorityNormal,
+		    .stack_size = 128 * 4
+
+	};
+	osThreadNew(perceptionVidTriggerSensorsTask, NULL, &TrigSenorsTaskAttr);
+    osThreadNew(perceptionVidSendSensorDataTask, NULL, &sendDateTaskAttr);
 }

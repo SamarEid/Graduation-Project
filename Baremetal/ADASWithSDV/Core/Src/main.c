@@ -26,7 +26,6 @@
 void SystemClock_Config(void);
 void SystemRCCInit(void);
 
-
 int main(void)
 {
 
@@ -39,13 +38,12 @@ int main(void)
   perceptionVidInit();
   actuatingVidInit();
 
-
-
   /* Init scheduler */
   osKernelInitialize();
 
   perceptionVidBegin();
   actuatingVidBegin();
+
 
   /* Start scheduler */
   osKernelStart();
@@ -103,12 +101,12 @@ void SystemClock_Config(void)
 void SystemRCCInit(void){
 	__HAL_RCC_GPIOA_CLK_ENABLE();
 	__HAL_RCC_GPIOB_CLK_ENABLE();
-	__HAL_RCC_TIM2_CLK_ENABLE();
 	__HAL_RCC_TIM3_CLK_ENABLE();
 	__HAL_RCC_TIM4_CLK_ENABLE();
 	__HAL_RCC_TIM5_CLK_ENABLE();
 	__HAL_RCC_SPI2_CLK_ENABLE();
 	__HAL_RCC_TIM1_CLK_ENABLE();
+
 }
 
 /**

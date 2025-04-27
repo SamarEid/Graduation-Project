@@ -8,8 +8,7 @@
 #ifndef COMMUNICATION_SENDER_TRANSMISSION_TRANSMISSION_H_
 #define COMMUNICATION_SENDER_TRANSMISSION_TRANSMISSION_H_
 
-#define START_FRAME					(uint8_t)0xA0
-#define END_FRAME					(uint8_t)0xB0
+
 #define SENSOR_DATA_SIZE 			8
 void transmissionVidSendSensorData(sensorTypeDef*);
 void transmissionVidSendSingleValue(uint8_t value);

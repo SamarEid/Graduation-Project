@@ -1,0 +1,58 @@
+/*
+ * ultraSonic.h
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#ifndef PERCEPTION_HAL_ULTRASONIC_H_
+#define PERCEPTION_HAL_ULTRASONIC_H_
+
+#define SOUND_SPEED  				(float)0.0343f // in cm/us
+#define TIMER_FREQUENCY 			16000000
+//#define TRIGGER_FREQUENCY 			25
+#define TICK_FREQUENCY 				1000000
+//#define PWM_HIGH_TIME				0.00001
+//#define PWM_FULL_TIME				0.025
+#define SAMPLING_TIME				0.025
+#define TIMER_CLOCK_DIVISON         TIM_CLOCKDIVISION_DIV1
+#define TIMER_COUNTER_MODE			TIM_COUNTERMODE_UP
+//#define TIMER_OUTPUTCOMPARE_MODE 	TIM_OCMODE_PWM1
+#define DIGITAL_FILTER				0x0
+#define FIRST_CAPTURE				(uint8_t)0
+#define SECOND_CAPTURE				(uint8_t)1
+//#define TRIGGER_CHANNEL_1 			TIM_CHANNEL_1
+//#define TRIGGER_CHANNEL_2 			TIM_CHANNEL_2
+//#define TRIGGER_CHANNEL_3 			TIM_CHANNEL_3
+//#define TRIGGER_CHANNEL_4 			TIM_CHANNEL_4
+#define ECHO_RISING_CHANNEL 		TIM_CHANNEL_1
+#define ECHO_FALLING_CHANNEL 		TIM_CHANNEL_2
+#define IT_CC_CHANNEL				TIM_IT_CC1
+#define GET_PSC()					(uint16_t)(((TIMER_FREQUENCY)/(TICK_FREQUENCY))-1)
+//#define GET_PULSE()   				(uint32_t)(((PWM_HIGH_TIME)*(TICK_FREQUENCY)))
+#define GET_ARR() 					(uint32_t)(((SAMPLING_TIME)*(TICK_FREQUENCY))-1)
+#define ECHO_PRIORITY				5
+
+typedef struct {
+	GPIO_TypeDef* GPIOxTrigger;
+	GPIO_TypeDef* GPIOx1Echo;
+	GPIO_TypeDef* GPIOx2Echo;
+	uint32_t GPIOxTriggerPin;
+	uint32_t GPIOx1EchoPin;
+	uint32_t GPIOx2EchoPin;
+	uint32_t GPIOxEchoPinAF;
+	TIM_TypeDef* TIMxEcho;
+	TIM_HandleTypeDef* htimEcho;
+	IRQn_Type EchoIRQ;
+
+} ultraSonicInitTypeDef;
+
+void ultraSonicVidInit(ultraSonicInitTypeDef*);
+void ultraSonicVidStart(ultraSonicInitTypeDef*);
+void ultraSonicVidTrig(ultraSonicInitTypeDef* );
+void ultraSonicVidHaltTrig(ultraSonicInitTypeDef*);
+float ultraSonicFloatGetDistance(uint32_t*, uint32_t*);
+void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+
+void ultraSonicCheckOverFlow(TIM_HandleTypeDef*, uint8_t*);
+
+#endif /* PERCEPTION_HAL_ULTRASONIC_H_ */

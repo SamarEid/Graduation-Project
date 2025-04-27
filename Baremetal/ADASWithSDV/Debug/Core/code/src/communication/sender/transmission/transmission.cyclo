@@ -1,4 +1,1 @@
-../Core/code/src/communication/sender/transmission/transmission.c:13:6:transmissionVidSendSensorData	1
-../Core/code/src/communication/sender/transmission/transmission.c:17:6:transmissionVidSendSingleValue	1
-../Core/code/src/communication/sender/transmission/transmission.c:21:6:transmissionVidSendStart	1
-../Core/code/src/communication/sender/transmission/transmission.c:25:6:transmissionVidSendEnd	1
+../Core/code/src/communication/sender/transmission/transmission.c:15:6:transmissionVidSendSensorData	1

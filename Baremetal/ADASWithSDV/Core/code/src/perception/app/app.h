@@ -8,8 +8,10 @@
 #ifndef PERCEPTION_APP_APP_H_
 #define PERCEPTION_APP_APP_H_
 
-void perceptionVidCheckOverFlowTask(void*pvParameters);
-void perceptionVidSendSensorsDataTask(void*pvParameters);
+void sendDataToQueue(uint32_t, float);
+void perceptionVidTriggerSensorsTask(void* pvParameters);
+//void perceptionVidCheckOverFlowTask(void*pvParameters);
+void perceptionVidSendSensorDataTask(void* pvParameters);
 void perceptionVidInit(void);
 void perceptionVidBegin(void);
 

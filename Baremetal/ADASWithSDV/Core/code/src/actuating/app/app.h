@@ -10,8 +10,8 @@
 
 #define INITIAL_SPEED 		30
 typedef enum {
-	START,
-	FORWARD,
+	START = 0x0A,
+	FORWARD ,
 	REVERSE,
 	TURNRIGHT,
 	TURNLEFT,

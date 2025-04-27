@@ -15,13 +15,10 @@
 #define MISO_PIN					GPIO_PIN_14
 #define SCLK_PIN 					GPIO_PIN_13
 #define SS_PIN						GPIO_PIN_12
-#define TRIGGER_PIN					GPIO_PIN_5
 #define DATA_SIZE					SPI_DATASIZE_8BIT
-#define BAUD_RATE_PRESCALER			SPI_BAUDRATEPRESCALER_2
-#define ENDIAN						SPI_FIRSTBIT_LSB
-
+#define ENDIAN						SPI_FIRSTBIT_MSB
+#define START_FRAME					(uint8_t)0xA0
+#define END_FRAME					(uint8_t)0xB0
+#define FRAME_SIZE					(uint16_t)10
 void communicationVidInit();
-void communicationVidSelectSlave();
-void communicationVidDeselectSlave();
-uint8_t communicationCharGetTriggerPinValue();
 #endif /* COMMUNICATION_COMMUNICATION_H_ */

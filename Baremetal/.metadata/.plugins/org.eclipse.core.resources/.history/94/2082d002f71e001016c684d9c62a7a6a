@@ -1,0 +1,111 @@
+/*
+ * app.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#include "stm32f4xx_hal.h"
+#include "cmsis_os.h"
+#include "../HAL/motor/motor.h"
+#include "../../communication/receiver/reception/reception.h"
+#include "./app.h"
+
+volatile uint8_t spiRxDone = 0;
+volatile uint8_t command[10];
+
+TIM_HandleTypeDef htim1 = {0};
+extern SPI_HandleTypeDef hspi2;
+
+
+// structs to initialize motors with its associated inputs and enables
+motorInitTypeDef LHS_Motor = {
+	.in1GPIOx = GPIOB,
+	.in1GPIOxPin =GPIO_PIN_0,
+	.in2GPIOx = GPIOB,
+	.in2GPIOxPin  =GPIO_PIN_1,
+	.enGPIOx = GPIOA,
+	.enGPIOxPin = GPIO_PIN_8,
+	.TIMxEnable = TIM1,
+	.htim = &htim1,
+	.TIMxEnableChannel = TIM_CHANNEL_1,
+	.GPIOEnPinAF = GPIO_AF1_TIM1,
+};
+
+motorInitTypeDef RHS_Motor = {
+	.in1GPIOx = GPIOB,
+	.in1GPIOxPin =GPIO_PIN_2,
+	.in2GPIOx = GPIOB,
+	.in2GPIOxPin  =GPIO_PIN_4,
+	.enGPIOx = GPIOA,
+	.enGPIOxPin = GPIO_PIN_9,
+	.TIMxEnable = TIM1,
+	.htim = &htim1,
+	.TIMxEnableChannel = TIM_CHANNEL_2,
+	.GPIOEnPinAF = GPIO_AF1_TIM1,
+};
+
+
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi) {
+    if (hspi->Instance == SPI2) {
+        spiRxDone = 1;
+    }
+}
+
+// initialize motors from structs that defined above
+void actuatingVidInit(void){
+	motorVidinit(&LHS_Motor);
+	motorVidinit(&RHS_Motor);
+	receptionVidReceiveCommand(command);
+}
+// receive command and execute it
+void actuatingVidExecuteCommandTask(void*pvParameters){
+	for(;;){
+		if(spiRxDone){
+            spiRxDone = 0;
+    		switch(command){
+    			case START:
+    				motorVidStart(&LHS_Motor,INITIAL_SPEED,CW);
+    				motorVidStart(&RHS_Motor,INITIAL_SPEED,CW);
+    				break;
+    			case FORWARD:
+    				motorVidSetMotorDirection(&LHS_Motor,CW);
+    				motorVidSetMotorDirection(&RHS_Motor,CW);
+    				break;
+    			case REVERSE:
+    				motorVidSetMotorDirection(&LHS_Motor,CCW);
+    				motorVidSetMotorDirection(&RHS_Motor,CCW);
+    				break;
+    			case TURNRIGHT:
+    				motorVidSetMotorDirection(&LHS_Motor,CW);
+    				motorVidSetMotorDirection(&RHS_Motor,CCW);
+    				break;
+    			case TURNLEFT:
+    				motorVidSetMotorDirection(&LHS_Motor,CCW);
+    				motorVidSetMotorDirection(&RHS_Motor,CW);
+    				break;
+    			case STOP:
+    				motorVidStop(&LHS_Motor);
+    				motorVidStop(&RHS_Motor);
+    				break;
+    			case 0xff:
+    				break;
+    			default:
+    				break;
+
+    		}
+    		receptionVidReceiveCommand(command);
+		}
+		osDelay(2);
+	}
+}
+// create actuating task
+void actuatingVidBegin(){
+	//define freeRTOS Tasks Parameters
+	osThreadId_t executeCommandTaskHandle;
+	const osThreadAttr_t executeCommandTask_attributes = {
+	  .name = "exeCommand",
+	  .stack_size = 128 * 4,
+	  .priority = (osPriority_t) osPriorityHigh,
+	};
+	executeCommandTaskHandle = osThreadNew(actuatingVidExecuteCommandTask, NULL, &executeCommandTask_attributes);
+}

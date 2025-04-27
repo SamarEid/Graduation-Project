@@ -1,0 +1,15 @@
+/*
+ * reception.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_spi.h"
+#include "../../communication.h"
+#include "./reception.h"
+extern SPI_HandleTypeDef hspi2 ;
+uint8_t checkValidityFrame[10] = {0xA0,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xB0};
+void receptionVidReceiveCommand(uint8_t*command){
+	HAL_SPI_TransmitReceive(&hspi2, checkValidityFrame, checkValidityFrame, 10, HAL_MAX_DELAY);
+}

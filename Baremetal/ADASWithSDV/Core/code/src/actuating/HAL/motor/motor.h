@@ -13,10 +13,10 @@
 
 #define MAXIMUM_MOTOR_RPM_SPEED        97
 #define HANDLE_FAULT_MOTOR_RPM_SPEED   10
-#define PWM_FREQ 					   10000       //1KHz
+#define PWM_FREQ 					   1000       //1KHz
 
 #define RESET_VALUE                    ( ((TICK_FREQ)/(PWM_FREQ))-1 )
-#define SET_ARR(SPEED)                 (uint32_t) ((((float)(SPEED)/(MAXIMUM_MOTOR_RPM_SPEED))*RESET_VALUE)-1)
+#define SET_PULSE(SPEED)               (uint32_t) ((((float)(SPEED)/(MAXIMUM_MOTOR_RPM_SPEED))*RESET_VALUE)-1)
 #define SET_PSC()                      (uint16_t)((TIMER_FREQ / TICK_FREQ) - 1)
 
 typedef struct {

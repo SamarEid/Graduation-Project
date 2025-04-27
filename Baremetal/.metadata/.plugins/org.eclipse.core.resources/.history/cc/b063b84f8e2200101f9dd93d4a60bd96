@@ -1,0 +1,15 @@
+/*
+ * reception.c
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_spi.h"
+#include "../../communication.h"
+#include "./reception.h"
+extern SPI_HandleTypeDef hspi2 ;
+
+void receptionVidReceiveCommand(uint8_t*command){
+	HAL_SPI_Receive(&hspi2, command, 10, HAL_MAX_DELAY);
+}

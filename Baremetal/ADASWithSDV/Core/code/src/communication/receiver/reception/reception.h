@@ -9,5 +9,5 @@
 #define COMMUNICATION_RECEPTION_RECEPTION_H_
 
 
-uint8_t receptionCharReceiveCommand();
+void receptionVidReceiveCommand(uint8_t*);
 #endif /*COMMUNICATION_RECEPTION_RECEPTION_H_ */

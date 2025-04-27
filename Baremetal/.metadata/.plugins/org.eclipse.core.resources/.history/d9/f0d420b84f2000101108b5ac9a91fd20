@@ -1,0 +1,47 @@
+/*
+ * ultraSonic.h
+ *
+ *  Created on: ??þ/??þ/????
+ *      Author: ASHRY
+ */
+#ifndef PERCEPTION_HAL_ULTRASONIC_H_
+#define PERCEPTION_HAL_ULTRASONIC_H_
+
+#define SOUND_SPEED  				(float)0.0343f // in cm/us
+#define MINIMUM_DISTANCE            2.0f
+#define	MAXIMUM_DISTANCE			400.0f
+#define TIMER_FREQUENCY 			16000000
+#define TICK_FREQUENCY 				1000000
+#define SAMPLING_TIME				0.05
+#define TIMER_CLOCK_DIVISON         TIM_CLOCKDIVISION_DIV1
+#define TIMER_COUNTER_MODE			TIM_COUNTERMODE_UP
+#define DIGITAL_FILTER				0x0
+#define FIRST_CAPTURE				(uint8_t)0
+#define SECOND_CAPTURE				(uint8_t)1
+#define ECHO_CHANNEL 				TIM_CHANNEL_1
+#define IT_CC_CHANNEL				TIM_IT_CC1
+#define GET_PSC()					(uint16_t)(((TIMER_FREQUENCY)/(TICK_FREQUENCY))-1)
+#define GET_ARR() 					0xffff//(uint32_t)(((SAMPLING_TIME)*(TICK_FREQUENCY))-1)
+#define ECHO_PRIORITY				5
+
+typedef struct {
+	GPIO_TypeDef* GPIOxTrigger;
+	GPIO_TypeDef* GPIOxEcho;
+	uint32_t GPIOxTriggerPin;
+	uint32_t GPIOxEchoPin;
+	uint32_t GPIOxEchoPinAF;
+	TIM_TypeDef* TIMxEcho;
+	TIM_HandleTypeDef* htimEcho;
+	IRQn_Type EchoIRQ;
+
+} ultraSonicInitTypeDef;
+
+void ultraSonicVidInit(ultraSonicInitTypeDef*);
+void ultraSonicVidStart(ultraSonicInitTypeDef*);
+void ultraSonicVidTrig(ultraSonicInitTypeDef* );
+void ultraSonicVidHaltTrig(ultraSonicInitTypeDef*);
+void ultraSonicVidDelayMicroSeconds(uint32_t);
+float ultraSonicFloatGetDistance(uint32_t*, uint32_t*);
+void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+
+#endif /* PERCEPTION_HAL_ULTRASONIC_H_ */

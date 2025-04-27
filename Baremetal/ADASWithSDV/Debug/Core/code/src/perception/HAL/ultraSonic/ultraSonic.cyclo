@@ -1,5 +1,7 @@
 ../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:11:6:ultraSonicVidInit	1
-../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:67:6:ultraSonicVidStart	1
-../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:72:7:ultraSonicFloatGetDistance	1
-../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:80:6:ultraSonicInputCaptureHandler	2
-../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:94:6:ultraSonicCheckOverFlow	2
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:53:6:ultraSonicVidStart	1
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:57:7:ultraSonicFloatGetDistance	2
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:68:6:ultraSonicVidInputCaptureHandler	5
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:92:6:ultraSonicVidTrig	1
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:95:6:ultraSonicVidHaltTrig	1
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:98:6:ultraSonicVidDelayMicroSeconds	2

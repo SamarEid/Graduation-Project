@@ -43,7 +43,7 @@ void motorVidinit(motorInitTypeDef*motor){
     HAL_TIM_PWM_Init(motor->htim);
 
     sConfigOC.OCMode = TIM_OCMODE_PWM1;
-    sConfigOC.Pulse = SET_ARR(HANDLE_FAULT_MOTOR_RPM_SPEED);
+    sConfigOC.Pulse = SET_PULSE(HANDLE_FAULT_MOTOR_RPM_SPEED);
     sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
     sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
     HAL_TIM_PWM_ConfigChannel(motor->htim, &sConfigOC, motor->TIMxEnableChannel);
@@ -58,9 +58,9 @@ void motorVidStart(motorInitTypeDef*motor, uint8_t motorSpeed,direction motorDir
 }
 void motorVidSetSpeed(motorInitTypeDef*motor, uint8_t motorSpeed){
 	if(motorSpeed <= MAXIMUM_MOTOR_RPM_SPEED){
-		__HAL_TIM_SET_AUTORELOAD(motor->htim,SET_ARR(motorSpeed) );
+		__HAL_TIM_SET_COMPARE(motor->htim,motor->TIMxEnableChannel,SET_PULSE(motorSpeed) );
 	}else{
-		__HAL_TIM_SET_AUTORELOAD(motor->htim,SET_ARR(HANDLE_FAULT_MOTOR_RPM_SPEED) );
+		__HAL_TIM_SET_COMPARE(motor->htim,motor->TIMxEnableChannel,SET_PULSE(HANDLE_FAULT_MOTOR_RPM_SPEED) );
 	}
 }
 void motorVidSetMotorDirection(motorInitTypeDef*motor,direction motorDirection){

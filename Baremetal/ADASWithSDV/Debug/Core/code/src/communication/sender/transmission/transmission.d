@@ -28,6 +28,7 @@ Core/code/src/communication/sender/transmission/transmission.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
+ ../Core/code/src/communication/sender/transmission/../../communication.h \
  ../Core/code/src/communication/sender/transmission/../typesdefinition/typedefinitions.h \
  ../Core/code/src/communication/sender/transmission/../formatter/serialization.h \
  ../Core/code/src/communication/sender/transmission/./transmission.h
@@ -59,6 +60,7 @@ Core/code/src/communication/sender/transmission/transmission.o: \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+../Core/code/src/communication/sender/transmission/../../communication.h:
 ../Core/code/src/communication/sender/transmission/../typesdefinition/typedefinitions.h:
 ../Core/code/src/communication/sender/transmission/../formatter/serialization.h:
 ../Core/code/src/communication/sender/transmission/./transmission.h:

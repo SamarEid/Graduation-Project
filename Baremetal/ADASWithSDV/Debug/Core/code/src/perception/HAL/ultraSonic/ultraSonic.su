@@ -1,5 +1,7 @@
-../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:11:6:ultraSonicVidInit	80	static
-../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:67:6:ultraSonicVidStart	16	static
-../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:72:7:ultraSonicFloatGetDistance	24	static
-../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:80:6:ultraSonicInputCaptureHandler	32	static
-../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:94:6:ultraSonicCheckOverFlow	16	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:11:6:ultraSonicVidInit	56	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:53:6:ultraSonicVidStart	16	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:57:7:ultraSonicFloatGetDistance	24	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:68:6:ultraSonicVidInputCaptureHandler	32	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:92:6:ultraSonicVidTrig	16	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:95:6:ultraSonicVidHaltTrig	16	static
+../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c:98:6:ultraSonicVidDelayMicroSeconds	24	static,ignoring_inline_asm

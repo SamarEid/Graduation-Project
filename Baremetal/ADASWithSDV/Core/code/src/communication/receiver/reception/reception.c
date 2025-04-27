@@ -9,15 +9,7 @@
 #include "../../communication.h"
 #include "./reception.h"
 extern SPI_HandleTypeDef hspi2 ;
-
-uint8_t receptionCharReceiveCommand(){
-	uint8_t command;
-	if(communicationCharGetTriggerPinValue() == RESET){
-		  return 0xff;
-	}
-	communicationVidSelectSlave();
-	while(__HAL_SPI_GET_FLAG(&hspi2, SPI_FLAG_RXNE) != SET);
-	HAL_SPI_Receive(&hspi2, &command, 1, HAL_MAX_DELAY);
-	communicationVidDeselectSlave();
-	return command;
+uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+void receptionVidReceiveCommand(uint8_t*command){
+	HAL_SPI_TransmitReceive(&hspi2, checkValidityFrame, command, FRAME_SIZE, HAL_MAX_DELAY);
 }
