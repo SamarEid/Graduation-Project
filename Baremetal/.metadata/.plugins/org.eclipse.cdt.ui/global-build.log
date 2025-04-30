@@ -20161,3 +20161,324 @@ arm-none-eabi-size  ADASWithSDV.elf
   28856	    276	  21284	  50416	   c4f0	ADASWithSDV.elf
 Finished building: default.size.stdout
  
+10:54:15 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28856	    276	  21284	  50416	   c4f0	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+11:06:12 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/communication/receiver/reception/reception.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/communication/receiver/reception/reception.d" -MT"Core/code/src/communication/receiver/reception/reception.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/communication/receiver/reception/reception.o"
+arm-none-eabi-gcc "../Core/code/src/actuating/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/actuating/app/app.d" -MT"Core/code/src/actuating/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/actuating/app/app.o"
+../Core/code/src/actuating/app/app.c: In function 'actuatingVidBegin':
+../Core/code/src/actuating/app/app.c:106:22: warning: variable 'executeCommandTaskHandle' set but not used [-Wunused-but-set-variable]
+  106 |         osThreadId_t executeCommandTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:43: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                           ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:43: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:48: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:48: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:53: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                     ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:53: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:58: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                          ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:58: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:63: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                               ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:63: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:68: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                    ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:68: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:73: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                         ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:73: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:78: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                              ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:78: note: (near initialization for 'checkValidityFrame')
+In file included from ../Core/code/src/communication/receiver/reception/reception.c:9:
+../Core/code/src/communication/receiver/reception/../../communication.h:21:57: warning: excess elements in scalar initializer
+   21 | #define END_FRAME                                       (uint8_t)0xB0
+      |                                                         ^
+../Core/code/src/communication/receiver/reception/reception.c:12:83: note: in expansion of macro 'END_FRAME'
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                                   ^~~~~~~~~
+../Core/code/src/communication/receiver/reception/../../communication.h:21:57: note: (near initialization for 'checkValidityFrame')
+   21 | #define END_FRAME                                       (uint8_t)0xB0
+      |                                                         ^
+../Core/code/src/communication/receiver/reception/reception.c:12:83: note: in expansion of macro 'END_FRAME'
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                                   ^~~~~~~~~
+../Core/code/src/communication/receiver/reception/reception.c: In function 'receptionVidReceiveCommand':
+../Core/code/src/communication/receiver/reception/reception.c:14:41: warning: passing argument 2 of 'HAL_SPI_TransmitReceive' makes pointer from integer without a cast [-Wint-conversion]
+   14 |         HAL_SPI_TransmitReceive(&hspi2, checkValidityFrame, command, FRAME_SIZE, HAL_MAX_DELAY);
+      |                                         ^~~~~~~~~~~~~~~~~~
+      |                                         |
+      |                                         uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:403,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/code/src/communication/receiver/reception/reception.c:7:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:672:83: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  672 | HAL_StatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, const uint8_t *pTxData, uint8_t *pRxData,
+      |                                                                    ~~~~~~~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+11:07:01 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+11:07:05 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+11:16:41 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+11:17:12 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+11:26:32 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+Finished building: ADASWithSDV.list
+ 
+ 
+11:26:38 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+11:36:02 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+11:36:07 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+11:52:58 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+12:32:09 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+12:38:56 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
+12:39:04 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+12:39:22 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 

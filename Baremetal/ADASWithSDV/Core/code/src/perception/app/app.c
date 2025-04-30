@@ -123,7 +123,7 @@ void perceptionVidBegin(void) {
 	};
 	const osThreadAttr_t TrigSenorsTaskAttr = {
 			.name = "TriggerSensors",
-		    .priority = osPriorityNormal,
+		    .priority = osPriorityHigh,
 		    .stack_size = 128 * 4
 
 	};

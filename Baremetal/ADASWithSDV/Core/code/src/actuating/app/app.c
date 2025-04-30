@@ -48,34 +48,49 @@ void actuatingVidInit(void){
 // receive command and execute it
 void actuatingVidExecuteCommandTask(void*pvParameters){
 	uint8_t command[10] = {0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff};
+	uint8_t state = 0x00;
 	for(;;){
 		osMutexAcquire(spiMutexHandle, osWaitForever);
 		receptionVidReceiveCommand(command);
 		osMutexRelease(spiMutexHandle);
     	switch(command[0]){
    			case START:
-   				motorVidStart(&LHS_Motor,INITIAL_SPEED,CW);
-   				motorVidStart(&RHS_Motor,INITIAL_SPEED,CW);
+   				if(state == 0x00){
+   	   				motorVidStart(&LHS_Motor,INITIAL_SPEED,CW);
+   	   				motorVidStart(&RHS_Motor,INITIAL_SPEED,CW);
+   	   				state  = 0x01;
+   				}
     			break;
     		case FORWARD:
-    			motorVidSetMotorDirection(&LHS_Motor,CW);
-    			motorVidSetMotorDirection(&RHS_Motor,CW);
+    			if(state == 0x01){
+        			motorVidSetMotorDirection(&LHS_Motor,CW);
+        			motorVidSetMotorDirection(&RHS_Motor,CW);
+    			}
     			break;
     		case REVERSE:
-    			motorVidSetMotorDirection(&LHS_Motor,CCW);
-    			motorVidSetMotorDirection(&RHS_Motor,CCW);
+    			if(state == 0x01){
+        			motorVidSetMotorDirection(&LHS_Motor,CCW);
+        			motorVidSetMotorDirection(&RHS_Motor,CCW);
+    			}
     			break;
     		case TURNRIGHT:
-    			motorVidSetMotorDirection(&LHS_Motor,CW);
-    			motorVidSetMotorDirection(&RHS_Motor,CCW);
+    			if(state == 0x01){
+        			motorVidSetMotorDirection(&LHS_Motor,CW);
+        			motorVidSetMotorDirection(&RHS_Motor,CCW);
+    			}
     			break;
     		case TURNLEFT:
-    			motorVidSetMotorDirection(&LHS_Motor,CCW);
-    			motorVidSetMotorDirection(&RHS_Motor,CW);
+    			if(state == 0x01){
+        			motorVidSetMotorDirection(&LHS_Motor,CCW);
+        			motorVidSetMotorDirection(&RHS_Motor,CW);
+    			}
     			break;
     		case STOP:
-    			motorVidStop(&LHS_Motor);
-    			motorVidStop(&RHS_Motor);
+    			if(state == 0x01){
+        			motorVidStop(&LHS_Motor);
+        			motorVidStop(&RHS_Motor);
+        			state = 0x00;
+    			}
     			break;
     		case 0xff:
     			break;
