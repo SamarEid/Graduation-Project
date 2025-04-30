@@ -64,6 +64,8 @@ void motorVidSetSpeed(motorInitTypeDef*motor, uint8_t motorSpeed){
 	}
 }
 void motorVidSetMotorDirection(motorInitTypeDef*motor,direction motorDirection){
+	//halt enable signal first
+	HAL_TIM_PWM_Stop(motor->htim, motor->TIMxEnableChannel);
 	//reset bit first the control direction
 	HAL_GPIO_WritePin(motor->in1GPIOx, motor->in1GPIOxPin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(motor->in2GPIOx, motor->in2GPIOxPin, GPIO_PIN_RESET);
@@ -76,10 +78,11 @@ void motorVidSetMotorDirection(motorInitTypeDef*motor,direction motorDirection){
 		HAL_GPIO_WritePin(motor->in1GPIOx, motor->in1GPIOxPin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(motor->in2GPIOx, motor->in2GPIOxPin, GPIO_PIN_SET);
 	}
+	//resume enable signal again
+	HAL_TIM_PWM_Start(motor->htim,motor->TIMxEnableChannel);
 }
 void motorVidStop(motorInitTypeDef*motor){
+	HAL_TIM_PWM_Stop(motor->htim, motor->TIMxEnableChannel);
 	HAL_GPIO_WritePin(motor->in1GPIOx, motor->in1GPIOxPin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(motor->in2GPIOx, motor->in2GPIOxPin, GPIO_PIN_RESET);
-	HAL_TIM_PWM_Stop(motor->htim, motor->TIMxEnableChannel);
-
 }

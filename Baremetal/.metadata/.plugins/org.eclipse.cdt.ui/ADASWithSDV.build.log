@@ -1,10 +1,20 @@
-12:39:22 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+10:32:41 **** Incremental Build of configuration Debug for project ADASWithSDV ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/actuating/HAL/motor/motor.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/actuating/HAL/motor/motor.d" -MT"Core/code/src/actuating/HAL/motor/motor.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/actuating/HAL/motor/motor.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
 arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
    text	   data	    bss	    dec	    hex	filename
-  28936	    276	  21284	  50496	   c540	ADASWithSDV.elf
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
 Finished building: default.size.stdout
  
+Finished building: ADASWithSDV.list
+Finished building: ADASWithSDV.hex
+ 
+ 
 
-12:39:23 Build Finished. 0 errors, 0 warnings. (took 541ms)
+10:32:44 Build Finished. 0 errors, 0 warnings. (took 2s.523ms)
 

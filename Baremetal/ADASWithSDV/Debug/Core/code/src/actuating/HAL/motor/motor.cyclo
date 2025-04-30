@@ -2,4 +2,4 @@
 ../Core/code/src/actuating/HAL/motor/motor.c:51:6:motorVidStart	1
 ../Core/code/src/actuating/HAL/motor/motor.c:59:6:motorVidSetSpeed	8
 ../Core/code/src/actuating/HAL/motor/motor.c:66:6:motorVidSetMotorDirection	5
-../Core/code/src/actuating/HAL/motor/motor.c:80:6:motorVidStop	1
+../Core/code/src/actuating/HAL/motor/motor.c:84:6:motorVidStop	1
