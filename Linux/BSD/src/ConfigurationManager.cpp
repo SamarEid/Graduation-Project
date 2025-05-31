@@ -20,6 +20,7 @@ void ConfigurationManager::load(const std::string& configFilePath){
     RightSensorTopic = configJson["mqtt"]["right_sensor_topic"];
     RightBlindSpotTopic = configJson["mqtt"]["right_alert_topic"];
     LeftBlindSpotTopic = configJson["mqtt"]["left_alert_topic"];
+    controlTopic = configJson["mqtt"]["control"];
     criticalThreshold = configJson["thresholds"]["critical_threshold"];
     warningThreshold = configJson["thresholds"]["warning_threshold"];
 }

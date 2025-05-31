@@ -6,7 +6,7 @@
 void leftBlindSpotThread(Communication &comm){
     spdlog::info("left blind spot detection started");
     ConfigurationManager config("../config.json");
-    auto leftBSD = std::make_unique<BlindSpotDetection>(comm,config.LeftSensorTopic, config.LeftBlindSpotTopic,
+    auto leftBSD = std::make_unique<BlindSpotDetection>(comm,config.LeftSensorTopic, config.LeftBlindSpotTopic, config.controlTopic,
                                                          config.warningThreshold, config.criticalThreshold);
     leftBSD->start();
 

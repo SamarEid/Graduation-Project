@@ -13,6 +13,7 @@ class ConfigurationManager{
         std::string ClientId;
         std::string frontSensorTopic;
         std::string emergencyBrakingInfo;
+        std::string controlTopic;
         double criticalThreshold;
         double warningThreshold;
 

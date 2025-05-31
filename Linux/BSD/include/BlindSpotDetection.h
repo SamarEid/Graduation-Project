@@ -5,7 +5,7 @@
 
 class BlindSpotDetection {
     public:
-        BlindSpotDetection(Communication &comm, const std::string &sensorTopic, const std::string &alertTopic, 
+        BlindSpotDetection(Communication &comm, const std::string &sensorTopic, const std::string &alertTopic, const std::string &controlTopic,
             double warningThreshold, double criticalThreshold);
         ~BlindSpotDetection();
         void start();
@@ -14,8 +14,10 @@ class BlindSpotDetection {
         Communication &comm;
         std::string sensorTopic;
         std::string alertTopic;
+        std::string controlTopic;
         double warningThreshold;
         double criticalThreshold;
+        bool bsdON = true;
 
         void checkBlindSpot(double distance);
 };

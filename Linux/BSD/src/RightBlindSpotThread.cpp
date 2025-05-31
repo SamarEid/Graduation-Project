@@ -6,7 +6,7 @@
 void rightBlindSpotThread(Communication &comm){
     spdlog::info("Right blind spot detection thread started");
     ConfigurationManager config("../config.json");
-    auto rightBSD = std::make_unique<BlindSpotDetection>(comm, config.RightSensorTopic , config.RightBlindSpotTopic, 
+    auto rightBSD = std::make_unique<BlindSpotDetection>(comm, config.RightSensorTopic , config.RightBlindSpotTopic, config.controlTopic, 
                                                                 config.warningThreshold , config.criticalThreshold);
     rightBSD->start();
 

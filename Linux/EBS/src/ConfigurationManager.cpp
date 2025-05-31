@@ -17,6 +17,7 @@ void ConfigurationManager::load(const std::string& configFilePath){
     ClientId = configJson["mqtt"]["client_id"];
     frontSensorTopic = configJson["mqtt"]["front_sensor_topic"];
     emergencyBrakingInfo = configJson["mqtt"]["front_alert_topic"];
+    controlTopic = configJson["mqtt"]["control"];
     criticalThreshold = configJson["thresholds"]["critical_threshold"];
     warningThreshold = configJson["thresholds"]["warning_threshold"];
 }

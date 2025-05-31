@@ -6,7 +6,7 @@
 int main(){
     ConfigurationManager config("../config.json");
     Communication ebs_comm(config.broker, config.ClientId);
-    EmergecyBrakingSystem ebs(ebs_comm, config.frontSensorTopic, config.emergencyBrakingInfo, config.warningThreshold, config.criticalThreshold);
+    EmergecyBrakingSystem ebs(ebs_comm, config.frontSensorTopic, config.emergencyBrakingInfo,config.controlTopic, config.warningThreshold, config.criticalThreshold);
 
     if(!ebs_comm.connect())
         return -1;

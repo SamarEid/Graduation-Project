@@ -1,12 +1,13 @@
 {
     "mqtt": {
-        "broker": "tcp://test.mosquitto.org:1883",
+        "broker": "localhost",
         "client_id_left": "LeftBSD_Client",
         "client_id_right": "RightBSD_Client",
-        "left_sensor_topic": "left_ultrasonic",
-        "right_sensor_topic": "right_ultrasonic",
-        "left_alert_topic": "left_blindSpot_status",
-        "right_alert_topic": "right_blindSpot_status"
+        "left_sensor_topic": "sensors/left",
+        "right_sensor_topic": "sensors/right",
+        "left_alert_topic": "info/bsd/left",
+        "right_alert_topic": "info/bsd/right",
+        "control": "control/bsd"
     },
     "thresholds": {
         "warning_threshold": 8.0,

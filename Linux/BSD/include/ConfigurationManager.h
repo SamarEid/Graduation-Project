@@ -16,6 +16,7 @@ class ConfigurationManager{
         std::string LeftSensorTopic;
         std::string RightBlindSpotTopic;
         std::string LeftBlindSpotTopic;
+        std::string controlTopic;
         double criticalThreshold;
         double warningThreshold;
 

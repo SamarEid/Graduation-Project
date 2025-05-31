@@ -5,7 +5,7 @@
 
 class EmergecyBrakingSystem {
     public:
-        EmergecyBrakingSystem(Communication &comm, const std::string &sensorTopic, const std::string &alertTopic, 
+        EmergecyBrakingSystem(Communication &comm, const std::string &sensorTopic, const std::string &alertTopic, std::string &controlTopic,
             double warningThreshold, double criticalThreshold);
         ~EmergecyBrakingSystem();
         void start();
@@ -14,8 +14,10 @@ class EmergecyBrakingSystem {
         Communication &comm;
         std::string sensorTopic;
         std::string alertTopic;
+        std::string controlTopic;
         double warningThreshold;
         double criticalThreshold;
+        bool ebsON = true;
 
         void emergecyBraking(double distance);
 };
