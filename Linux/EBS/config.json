@@ -1,0 +1,13 @@
+{
+    "mqtt": {
+        "broker": "localhost",
+        "client_id": "EBS_Client",
+        "front_sensor_topic": "sensors/front",
+        "front_alert_topic": "info/braking",
+        "control": "control/ebs"
+    },
+    "thresholds": {
+        "warning_threshold": 8.0,
+        "critical_threshold": 4.0
+    }
+}

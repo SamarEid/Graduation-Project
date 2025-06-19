@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/signs">
+        <file>Stop.png</file>
+        <file>Red Light.png</file>
+        <file>Speed Limit 10.png</file>
+        <file>Speed Limit 20.png</file>
+        <file>Speed Limit 30.png</file>
+        <file>Speed Limit 40.png</file>
+        <file>Speed Limit 50.png</file>
+        <file>Speed Limit 60.png</file>
+        <file>Speed Limit 70.png</file>
+        <file>Speed Limit 80.png</file>
+        <file>Speed Limit 90.png</file>
+        <file>Speed Limit 100.png</file>
+        <file>Speed Limit 110.png</file>
+        <file>Speed Limit 120.png</file>
+        <file>Green Light.png</file>
+    </qresource>
+</RCC>

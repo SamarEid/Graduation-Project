@@ -1,0 +1,16 @@
+{
+    "mqtt": {
+        "broker": "localhost",
+        "client_id_left": "LeftBSD_Client",
+        "client_id_right": "RightBSD_Client",
+        "left_sensor_topic": "sensors/left",
+        "right_sensor_topic": "sensors/right",
+        "left_alert_topic": "info/bsd/left",
+        "right_alert_topic": "info/bsd/right",
+        "control": "control/bsd"
+    },
+    "thresholds": {
+        "warning_threshold": 8.0,
+        "critical_threshold": 4.0
+    }
+}
