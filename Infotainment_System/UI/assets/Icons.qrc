@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>settings.png</file>
+        <file>switch-on.png</file>
+        <file>off-button.png</file>
+    </qresource>
+</RCC>
