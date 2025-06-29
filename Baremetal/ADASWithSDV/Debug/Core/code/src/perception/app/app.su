@@ -1,0 +1,6 @@
+../Core/code/src/perception/app/app.c:66:6:sendDataToQueue	32	static,ignoring_inline_asm
+../Core/code/src/perception/app/app.c:72:6:HAL_TIM_IC_CaptureCallback	24	static
+../Core/code/src/perception/app/app.c:81:6:perceptionVidTriggerSensorsTask	16	static
+../Core/code/src/perception/app/app.c:97:6:perceptionVidSendSensorDataTask	24	static
+../Core/code/src/perception/app/app.c:109:6:perceptionVidInit	8	static
+../Core/code/src/perception/app/app.c:119:6:perceptionVidBegin	80	static

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;src&apos; to &apos;code&apos;" description="Move &apos;src&apos; to &apos;code&apos;" destination="Core/code" element1="src" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1744732287493" updateReferences="true"/>
+</session>

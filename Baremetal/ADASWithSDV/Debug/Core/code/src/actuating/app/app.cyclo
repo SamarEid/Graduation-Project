@@ -1,0 +1,3 @@
+../Core/code/src/actuating/app/app.c:44:6:actuatingVidInit	1
+../Core/code/src/actuating/app/app.c:49:6:actuatingVidExecuteCommandTask	17
+../Core/code/src/actuating/app/app.c:105:6:actuatingVidBegin	1
