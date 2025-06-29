@@ -20516,3 +20516,813 @@ Finished building: ADASWithSDV.list
 Finished building: ADASWithSDV.hex
  
  
+00:44:08 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/croutine.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/croutine.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/croutine.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/croutine.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/event_groups.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/event_groups.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/event_groups.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/list.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/list.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/list.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/list.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/queue.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/queue.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/queue.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/queue.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/tasks.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/tasks.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/tasks.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/tasks.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/timers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/timers.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/timers.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/timers.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/code/src/utils/utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/utils/utils.d" -MT"Core/code/src/utils/utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/utils/utils.o"
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+arm-none-eabi-gcc "../Core/code/src/perception/HAL/ultraSonic/ultraSonic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/HAL/ultraSonic/ultraSonic.d" -MT"Core/code/src/perception/HAL/ultraSonic/ultraSonic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/HAL/ultraSonic/ultraSonic.o"
+arm-none-eabi-gcc "../Core/code/src/communication/sender/transmission/transmission.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/communication/sender/transmission/transmission.d" -MT"Core/code/src/communication/sender/transmission/transmission.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/communication/sender/transmission/transmission.o"
+arm-none-eabi-gcc "../Core/code/src/communication/sender/formatter/serialization.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/communication/sender/formatter/serialization.d" -MT"Core/code/src/communication/sender/formatter/serialization.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/communication/sender/formatter/serialization.o"
+arm-none-eabi-gcc "../Core/code/src/communication/receiver/reception/reception.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/communication/receiver/reception/reception.d" -MT"Core/code/src/communication/receiver/reception/reception.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/communication/receiver/reception/reception.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/code/src/communication/communication.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/communication/communication.d" -MT"Core/code/src/communication/communication.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/communication/communication.o"
+arm-none-eabi-gcc "../Core/code/src/actuating/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/actuating/app/app.d" -MT"Core/code/src/actuating/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/actuating/app/app.o"
+arm-none-eabi-gcc "../Core/code/src/actuating/HAL/motor/motor.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/actuating/HAL/motor/motor.d" -MT"Core/code/src/actuating/HAL/motor/motor.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/actuating/HAL/motor/motor.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f401rctx.d" -MT"Core/Startup/startup_stm32f401rctx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f401rctx.o" "../Core/Startup/startup_stm32f401rctx.s"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+../Core/code/src/communication/receiver/reception/reception.c:12:43: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                           ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:43: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:48: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:48: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:53: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+      |                                                     ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:53: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:58: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                          ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:58: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:63: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                               ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:63: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:68: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                    ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:68: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:73: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                         ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:73: note: (near initialization for 'checkValidityFrame')
+../Core/code/src/communication/receiver/reception/reception.c:12:78: warning: excess elements in scalar initializer
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                              ^~~~
+../Core/code/src/communication/receiver/reception/reception.c:12:78: note: (near initialization for 'checkValidityFrame')
+In file included from ../Core/code/src/communication/receiver/reception/reception.c:9:
+../Core/code/src/communication/receiver/reception/../../communication.h:21:57: warning: excess elements in scalar initializer
+   21 | #define END_FRAME                                       (uint8_t)0xB0
+      |                                                         ^
+../Core/code/src/communication/receiver/reception/reception.c:12:83: note: in expansion of macro 'END_FRAME'
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                                   ^~~~~~~~~
+../Core/code/src/communication/receiver/reception/../../communication.h:21:57: note: (near initialization for 'checkValidityFrame')
+   21 | #define END_FRAME                                       (uint8_t)0xB0
+      |                                                         ^
+../Core/code/src/communication/receiver/reception/reception.c:12:83: note: in expansion of macro 'END_FRAME'
+   12 | uint8_t checkValidityFrame = {START_FRAME,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,END_FRAME};
+      |                                                                                   ^~~~~~~~~
+../Core/code/src/communication/receiver/reception/reception.c: In function 'receptionVidReceiveCommand':
+../Core/code/src/communication/receiver/reception/reception.c:14:41: warning: passing argument 2 of 'HAL_SPI_TransmitReceive' makes pointer from integer without a cast [-Wint-conversion]
+   14 |         HAL_SPI_TransmitReceive(&hspi2, checkValidityFrame, command, FRAME_SIZE, HAL_MAX_DELAY);
+      |                                         ^~~~~~~~~~~~~~~~~~
+      |                                         |
+      |                                         uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:403,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/code/src/communication/receiver/reception/reception.c:7:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:672:83: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+  672 | HAL_StatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, const uint8_t *pTxData, uint8_t *pRxData,
+      |                                                                    ~~~~~~~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+../Core/code/src/actuating/app/app.c: In function 'actuatingVidBegin':
+../Core/code/src/actuating/app/app.c:106:22: warning: variable 'executeCommandTaskHandle' set but not used [-Wunused-but-set-variable]
+  106 |         osThreadId_t executeCommandTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_timebase_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_timebase_tim.d" -MT"Core/Src/stm32f4xx_hal_timebase_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_timebase_tim.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+00:47:03 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+00:49:11 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:46:17: warning: implicit declaration of function 'motorVidStart' [-Wimplicit-function-declaration]
+   46 |                 motorVidStart(&LHS_Motor,INITIAL_SPEED,CW);
+      |                 ^~~~~~~~~~~~~
+../Core/Src/main.c:46:32: error: 'LHS_Motor' undeclared (first use in this function)
+   46 |                 motorVidStart(&LHS_Motor,INITIAL_SPEED,CW);
+      |                                ^~~~~~~~~
+../Core/Src/main.c:46:32: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:46:56: error: 'CW' undeclared (first use in this function)
+   46 |                 motorVidStart(&LHS_Motor,INITIAL_SPEED,CW);
+      |                                                        ^~
+../Core/Src/main.c:47:32: error: 'RHS_Motor' undeclared (first use in this function)
+   47 |                 motorVidStart(&RHS_Motor,INITIAL_SPEED,CW);
+      |                                ^~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:51:13 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28984	    276	  21284	  50544	   c570	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+00:51:19 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28984	    276	  21284	  50544	   c570	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+00:54:13 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+00:54:22 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+00:56:47 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+01:40:52 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+01:42:05 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+01:43:01 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+01:44:22 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+01:45:36 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+01:46:12 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+01:46:32 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+01:52:05 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+02:00:35 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+02:00:41 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+02:01:01 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+02:01:48 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+02:02:03 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+02:04:31 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+02:04:37 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+02:04:53 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+02:05:07 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+02:08:48 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+02:09:06 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+03:09:03 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  27432	    276	  21284	  48992	   bf60	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+03:09:10 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27432	    276	  21284	  48992	   bf60	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+03:09:53 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+03:10:29 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+04:15:30 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+04:15:46 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    276	  21284	  50528	   c560	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+04:19:34 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/communication/receiver/reception/reception.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/communication/receiver/reception/reception.d" -MT"Core/code/src/communication/receiver/reception/reception.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/communication/receiver/reception/reception.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28952	    284	  21284	  50520	   c558	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+04:19:41 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28952	    284	  21284	  50520	   c558	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+04:20:03 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28952	    284	  21284	  50520	   c558	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+04:24:29 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+arm-none-eabi-gcc "../Core/code/src/actuating/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/actuating/app/app.d" -MT"Core/code/src/actuating/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/actuating/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/actuating/app/app.c: In function 'actuatingVidBegin':
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/actuating/app/app.c:106:22: warning: variable 'executeCommandTaskHandle' set but not used [-Wunused-but-set-variable]
+  106 |         osThreadId_t executeCommandTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28952	    284	  21284	  50520	   c558	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+04:24:35 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28952	    284	  21284	  50520	   c558	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+04:26:13 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/actuating/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/actuating/app/app.d" -MT"Core/code/src/actuating/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/actuating/app/app.o"
+../Core/code/src/actuating/app/app.c: In function 'actuatingVidBegin':
+../Core/code/src/actuating/app/app.c:106:22: warning: variable 'executeCommandTaskHandle' set but not used [-Wunused-but-set-variable]
+  106 |         osThreadId_t executeCommandTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28952	    284	  21284	  50520	   c558	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+04:26:20 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28952	    284	  21284	  50520	   c558	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+05:02:23 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28984	    284	  21284	  50552	   c578	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+05:02:29 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28984	    284	  21284	  50552	   c578	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+05:03:07 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28952	    284	  21284	  50520	   c558	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+05:03:13 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28952	    284	  21284	  50520	   c558	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+05:06:50 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+arm-none-eabi-gcc "../Core/code/src/actuating/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/actuating/app/app.d" -MT"Core/code/src/actuating/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/actuating/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/actuating/app/app.c: In function 'actuatingVidBegin':
+../Core/code/src/actuating/app/app.c:107:22: warning: variable 'executeCommandTaskHandle' set but not used [-Wunused-but-set-variable]
+  107 |         osThreadId_t executeCommandTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28968	    284	  21284	  50536	   c568	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+05:06:59 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    284	  21284	  50536	   c568	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+05:45:23 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/code/src/perception/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/perception/app/app.d" -MT"Core/code/src/perception/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/perception/app/app.o"
+arm-none-eabi-gcc "../Core/code/src/actuating/app/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/code/src/actuating/app/app.d" -MT"Core/code/src/actuating/app/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/code/src/actuating/app/app.o"
+../Core/code/src/perception/app/app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/code/src/perception/app/app.c:74:129: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   74 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&FRONT_firstCap, (uint32_t*)&FRONT_secondCap, (uint8_t*)&FRONT_flag,1,sendDataToQueue);
+      |                                                                                                                                 ^~~~~~~~~~~~~~~
+      |                                                                                                                                 |
+      |                                                                                                                                 void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+In file included from ../Core/code/src/perception/app/app.c:9:
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:76:124: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&LHS_firstCap, (uint32_t*)&LHS_secondCap, (uint8_t*)&LHS_flag,2, sendDataToQueue);
+      |                                                                                                                            ^~~~~~~~~~~~~~~
+      |                                                                                                                            |
+      |                                                                                                                            void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/perception/app/app.c:78:123: warning: passing argument 6 of 'ultraSonicVidInputCaptureHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+   78 |         ultraSonicVidInputCaptureHandler(htim, (uint32_t*)&RHS_firstCap, (uint32_t*)&RHS_secondCap, (uint8_t*)&RHS_flag,3,sendDataToQueue );
+      |                                                                                                                           ^~~~~~~~~~~~~~~
+      |                                                                                                                           |
+      |                                                                                                                           void (*)(uint32_t,  float) {aka void (*)(long unsigned int,  float)}
+../Core/code/src/perception/app/../HAL/ultraSonic/ultraSonic.h:44:105: note: expected 'void * (*)(uint32_t,  float)' {aka 'void * (*)(long unsigned int,  float)'} but argument is of type 'void (*)(uint32_t,  float)' {aka 'void (*)(long unsigned int,  float)'}
+   44 | void ultraSonicVidInputCaptureHandler(TIM_HandleTypeDef*, uint32_t*, uint32_t*,uint8_t* ,uint32_t, void*fPtr(uint32_t,float));
+      |                                                                                                    ~~~~~^~~~~~~~~~~~~~~~~~~~
+../Core/code/src/actuating/app/app.c: In function 'actuatingVidBegin':
+../Core/code/src/actuating/app/app.c:107:22: warning: variable 'executeCommandTaskHandle' set but not used [-Wunused-but-set-variable]
+  107 |         osThreadId_t executeCommandTaskHandle;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ADASWithSDV.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Graduation-Project\Baremetal\ADASWithSDV\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADASWithSDV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADASWithSDV.elf
+ 
+arm-none-eabi-size  ADASWithSDV.elf 
+arm-none-eabi-objdump -h -S ADASWithSDV.elf  > "ADASWithSDV.list"
+   text	   data	    bss	    dec	    hex	filename
+  28968	    284	  21284	  50536	   c568	ADASWithSDV.elf
+arm-none-eabi-objcopy  -O ihex ADASWithSDV.elf  "ADASWithSDV.hex"
+Finished building: default.size.stdout
+ 
+Finished building: ADASWithSDV.hex
+ 
+Finished building: ADASWithSDV.list
+ 
+05:45:31 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    284	  21284	  50536	   c568	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 
+10:26:44 **** Incremental Build of configuration Debug for project ADASWithSDV ****
+make -j8 all 
+arm-none-eabi-size  ADASWithSDV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28968	    284	  21284	  50536	   c568	ADASWithSDV.elf
+Finished building: default.size.stdout
+ 

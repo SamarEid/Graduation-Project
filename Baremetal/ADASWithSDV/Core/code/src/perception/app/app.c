@@ -99,9 +99,10 @@ void perceptionVidSendSensorDataTask(void* pvParameters) {
     for (;;) {
         osDelay(50);
         if (osMessageQueueGet(sensorQueueHandle, &sensorToSend , NULL, 0) == osOK) {
-        	osMutexAcquire(spiMutexHandle, osWaitForever);
-        	transmissionVidSendSensorData(&sensorToSend);
-        	osMutexRelease(spiMutexHandle);
+        	if(osMutexAcquire(spiMutexHandle, osWaitForever) == osOK){
+        		transmissionVidSendSensorData(&sensorToSend);
+        		osMutexRelease(spiMutexHandle);
+        	}
         }
     }
 }

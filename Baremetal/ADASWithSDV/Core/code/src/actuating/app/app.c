@@ -50,9 +50,10 @@ void actuatingVidExecuteCommandTask(void*pvParameters){
 	uint8_t command[10] = {0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff};
 	uint8_t state = 0x00;
 	for(;;){
-		osMutexAcquire(spiMutexHandle, osWaitForever);
-		receptionVidReceiveCommand(command);
-		osMutexRelease(spiMutexHandle);
+		if(osMutexAcquire(spiMutexHandle, osWaitForever) == osOK){
+			receptionVidReceiveCommand(command);
+			osMutexRelease(spiMutexHandle);
+		}
     	switch(command[0]){
    			case START:
    				if(state == 0x00){
