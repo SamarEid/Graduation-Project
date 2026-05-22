@@ -119,6 +119,5 @@ Machine Learning Engineer
 
 ---
 
-## 📄 License
 
 
