@@ -1,5 +1,4 @@
 # Graduation-Project
-SDV with ADAS
 # 🚗 Integration of Software-Defined Vehicles (SDV) with Advanced Driver Assistance Systems (ADAS) for Next-Generation Automotive Applications
 
 ## 📌 Overview
