@@ -1,0 +1,3 @@
+
+mosquitto_pub -t control/tsr -m "off"
+mosquitto_pub -t control/tsr -m "on"

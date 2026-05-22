@@ -1,0 +1,33 @@
+Dependancies : 
+
+pip install ultralytics
+pip install paho-mqtt
+pip install onnxruntime
+pip install opencv-python
+pip install numpy
+
+-----------------------
+
+Download Mosquitto :
+https://mosquitto.org/download/
+
+-------------------------
+
+Commands ( on / off model ) : 
+
+mosquitto_pub -t control/tsr -m "off"
+mosquitto_pub -t control/tsr -m "on"
+
+---------------------------------
+
+Steps to Test The Model : 
+
+1 - run python file 
+2 - open new terminal or cmd and write the command : mosquitto_pub -t control/tsr -m "on" 
+    >> then the camera will open , you can use traffic sign images to test ( using your phone ) 
+    >> the output ( sign's name ) will be printed 
+3 - finally use the command mosquitto_pub -t control/tsr -m "off" to stop the model 
+
+
+
+
